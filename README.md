@@ -12,12 +12,8 @@ Multiple times per week we receive data from various providers (e.g. cell phone 
   * Return the weekly average of the number of trips for an area defined by  bounding box and region
   * Inform about the status of the data ingestion without using a polling solution
 * The solution should be scalable to 100 million entries. It is encouraged to simplify the data by a data model. Please add proof that the solution is scalable. 
-* The solution should be written in Python, Java or JavaScript using an SQL database
+* The solution should be written in TypeScript using an SQL database
 * Bonus points if you containerize your solution and if you sketch how you would set up the application on AWS
 
 ## Delivery of your solution
-Please deliver your solution as a git repository in a ZIP file. The repository should contain full instructions for us to run the solution on our own machines.
-
-## Reviewing
-To avoid the bias of code reviews, we will anonymize your git history.
-What matters to us is to learn how you write code and documentation, what you consider as clean code, and how you generally approach the problem given limited requirements. For us, it is more important to have an understandable project than a complex algorithm.
+Please deliver your solution as a git repository. The repository should contain full instructions for us to run the solution on our own machines.
