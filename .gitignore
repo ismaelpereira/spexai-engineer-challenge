@@ -1,0 +1,5 @@
+node_modules
+.turbo
+.env
+apps/*/dist
+*/*/dist
