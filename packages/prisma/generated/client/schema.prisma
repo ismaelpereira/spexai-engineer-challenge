@@ -1,0 +1,48 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/client"
+}
+
+datasource db {
+  provider = "postgresql"
+  schemas  = ["trips"]
+}
+
+model IngestionStatus {
+  id            String    @id @default(uuid())
+  filename      String    @unique
+  status        String // "pending", "processing", "completed", "failed"
+  totalRows     Int       @default(0)
+  processedRows Int       @default(0)
+  errorMessage  String?
+  startedAt     DateTime  @default(now())
+  completedAt   DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  @@index([status])
+  @@index([filename])
+  @@schema("trips")
+}
+
+model TripGroup {
+  id             String   @id @default(uuid())
+  region         String
+  originLat      Float
+  originLon      Float
+  destinationLat Float
+  destinationLon Float
+  hourOfDay      Int
+  tripCount      Int      @default(1)
+  datasources    String[]
+  firstSeenAt    DateTime
+  lastSeenAt     DateTime
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@unique([region, originLat, originLon, destinationLat, destinationLon, hourOfDay])
+  @@index([region, hourOfDay])
+  @@index([originLat, originLon])
+  @@index([destinationLat, destinationLon])
+  @@schema("trips")
+}

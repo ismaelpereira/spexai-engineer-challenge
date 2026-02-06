@@ -1,0 +1,28 @@
+{
+  "name": "@trips/prisma",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "postinstall": "npm run db:generate",
+    "prebuild": "npm run db:generate",
+    "db:generate": "prisma generate --schema=./schema/schema.prisma",
+    "migrate:dev": "prisma migrate dev --schema=./schema/schema.prisma",
+    "migrate:deploy": "prisma migrate deploy --schema=./schema/schema.prisma",
+    "db:push": "prisma db push --schema=./schema/schema.prisma",
+    "studio": "prisma studio --schema=./schema/schema.prisma"
+  },
+  "files": [
+   "dist",
+   "generated"
+  ],
+  "dependencies": {
+    "@prisma/client": "^7.3.0",
+    "@prisma/adapter-pg": "^7.3.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "prisma": "^7.3.0"
+  }
+}

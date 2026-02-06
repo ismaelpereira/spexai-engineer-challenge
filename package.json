@@ -1,0 +1,29 @@
+{
+   "packageManager": "npm@11.4.2",
+   "workspaces": [
+      "apps/*",
+      "apps/*/*",
+      "packages/*"
+   ],
+   "scripts": {
+      "dev": "turbo run dev",
+      "dev:file-processor": "turbo run dev --filter=file-processor",
+      "build": "turbo run build",
+      "lint": "turbo run lint",
+      "test": "turbo run test",
+      "db:generate": "turbo run db:generate",
+      "db:migrate": "turbo run migrate:dev",
+      "db:push": "cd packages/prisma && npm run db:push",
+      "docker:build": "docker-compose build",
+      "docker:up": "docker-compose up -d",
+      "docker:down": "docker-compose down",
+      "docker:logs": "docker-compose logs -f"
+   },
+   "dependencies": {
+      "@prisma/client": "^7.3.0",
+      "prisma": "^7.3.0"
+   },
+   "devDependencies": {
+      "turbo": "^2.8.3"
+   }
+}
