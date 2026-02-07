@@ -15,7 +15,7 @@ export class FileProcessorRepository {
       errorMessage?: string | null;
       completedAt?:Date,
    }) {
-      return this.prisma.file_ingestion_status.upsert({
+      await this.prisma.file_ingestion_status.upsert({
          where: {
             filename
          },
@@ -35,6 +35,7 @@ export class FileProcessorRepository {
             totalRows:data.totalRows
          }
       })
+      await this.prisma.$queryRawUnsafe(`NOTIFY ingestion_status_changed, '${JSON.stringify({filename,...data})}'`)
    }
 
    async createOrUpdateTripsGroup(filename: string, data: ParsedTripRow) {
