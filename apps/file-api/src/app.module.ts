@@ -1,11 +1,11 @@
 import { Module } from "@nestjs/common";
 import { ConfigModule } from '@nestjs/config';
-import { FileProcessorModule } from "./domains/file-processor/file-processor.module";
 import { HealthModule } from "./domains/health/health.module";
 import { validate } from './utils/env/env.service';
+import { TripsModule } from "./domains/trips/trips.module";
 
 @Module({
-   imports: [ConfigModule.forRoot({validate,isGlobal:true}),FileProcessorModule,HealthModule],
+   imports: [ConfigModule.forRoot({validate,isGlobal:true}),HealthModule,TripsModule],
    controllers: [],
    providers: [],
 })

@@ -120,7 +120,7 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
-exports.Prisma.IngestionStatusScalarFieldEnum = {
+exports.Prisma.File_ingestion_statusScalarFieldEnum = {
   id: 'id',
   filename: 'filename',
   status: 'status',
@@ -133,7 +133,7 @@ exports.Prisma.IngestionStatusScalarFieldEnum = {
   updatedAt: 'updatedAt'
 };
 
-exports.Prisma.TripGroupScalarFieldEnum = {
+exports.Prisma.Trips_groupScalarFieldEnum = {
   id: 'id',
   region: 'region',
   originLat: 'originLat',
@@ -166,8 +166,8 @@ exports.Prisma.NullsOrder = {
 
 
 exports.Prisma.ModelName = {
-  IngestionStatus: 'IngestionStatus',
-  TripGroup: 'TripGroup'
+  file_ingestion_status: 'file_ingestion_status',
+  trips_group: 'trips_group'
 };
 
 /**

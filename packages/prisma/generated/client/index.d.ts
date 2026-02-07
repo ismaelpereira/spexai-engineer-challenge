@@ -14,15 +14,15 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
 
 
 /**
- * Model IngestionStatus
+ * Model file_ingestion_status
  * 
  */
-export type IngestionStatus = $Result.DefaultSelection<Prisma.$IngestionStatusPayload>
+export type file_ingestion_status = $Result.DefaultSelection<Prisma.$file_ingestion_statusPayload>
 /**
- * Model TripGroup
+ * Model trips_group
  * 
  */
-export type TripGroup = $Result.DefaultSelection<Prisma.$TripGroupPayload>
+export type trips_group = $Result.DefaultSelection<Prisma.$trips_groupPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -31,8 +31,8 @@ export type TripGroup = $Result.DefaultSelection<Prisma.$TripGroupPayload>
  * @example
  * ```
  * const prisma = new PrismaClient()
- * // Fetch zero or more IngestionStatuses
- * const ingestionStatuses = await prisma.ingestionStatus.findMany()
+ * // Fetch zero or more File_ingestion_statuses
+ * const file_ingestion_statuses = await prisma.file_ingestion_status.findMany()
  * ```
  *
  *
@@ -52,8 +52,8 @@ export class PrismaClient<
    * @example
    * ```
    * const prisma = new PrismaClient()
-   * // Fetch zero or more IngestionStatuses
-   * const ingestionStatuses = await prisma.ingestionStatus.findMany()
+   * // Fetch zero or more File_ingestion_statuses
+   * const file_ingestion_statuses = await prisma.file_ingestion_status.findMany()
    * ```
    *
    *
@@ -142,24 +142,24 @@ export class PrismaClient<
   }>>
 
       /**
-   * `prisma.ingestionStatus`: Exposes CRUD operations for the **IngestionStatus** model.
+   * `prisma.file_ingestion_status`: Exposes CRUD operations for the **file_ingestion_status** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more IngestionStatuses
-    * const ingestionStatuses = await prisma.ingestionStatus.findMany()
+    * // Fetch zero or more File_ingestion_statuses
+    * const file_ingestion_statuses = await prisma.file_ingestion_status.findMany()
     * ```
     */
-  get ingestionStatus(): Prisma.IngestionStatusDelegate<ExtArgs, ClientOptions>;
+  get file_ingestion_status(): Prisma.file_ingestion_statusDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.tripGroup`: Exposes CRUD operations for the **TripGroup** model.
+   * `prisma.trips_group`: Exposes CRUD operations for the **trips_group** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more TripGroups
-    * const tripGroups = await prisma.tripGroup.findMany()
+    * // Fetch zero or more Trips_groups
+    * const trips_groups = await prisma.trips_group.findMany()
     * ```
     */
-  get tripGroup(): Prisma.TripGroupDelegate<ExtArgs, ClientOptions>;
+  get trips_group(): Prisma.trips_groupDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -594,8 +594,8 @@ export namespace Prisma {
 
 
   export const ModelName: {
-    IngestionStatus: 'IngestionStatus',
-    TripGroup: 'TripGroup'
+    file_ingestion_status: 'file_ingestion_status',
+    trips_group: 'trips_group'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -611,155 +611,155 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "ingestionStatus" | "tripGroup"
+      modelProps: "file_ingestion_status" | "trips_group"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
-      IngestionStatus: {
-        payload: Prisma.$IngestionStatusPayload<ExtArgs>
-        fields: Prisma.IngestionStatusFieldRefs
+      file_ingestion_status: {
+        payload: Prisma.$file_ingestion_statusPayload<ExtArgs>
+        fields: Prisma.file_ingestion_statusFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.IngestionStatusFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IngestionStatusPayload> | null
+            args: Prisma.file_ingestion_statusFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$file_ingestion_statusPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.IngestionStatusFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IngestionStatusPayload>
+            args: Prisma.file_ingestion_statusFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$file_ingestion_statusPayload>
           }
           findFirst: {
-            args: Prisma.IngestionStatusFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IngestionStatusPayload> | null
+            args: Prisma.file_ingestion_statusFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$file_ingestion_statusPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.IngestionStatusFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IngestionStatusPayload>
+            args: Prisma.file_ingestion_statusFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$file_ingestion_statusPayload>
           }
           findMany: {
-            args: Prisma.IngestionStatusFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IngestionStatusPayload>[]
+            args: Prisma.file_ingestion_statusFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$file_ingestion_statusPayload>[]
           }
           create: {
-            args: Prisma.IngestionStatusCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IngestionStatusPayload>
+            args: Prisma.file_ingestion_statusCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$file_ingestion_statusPayload>
           }
           createMany: {
-            args: Prisma.IngestionStatusCreateManyArgs<ExtArgs>
+            args: Prisma.file_ingestion_statusCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.IngestionStatusCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IngestionStatusPayload>[]
+            args: Prisma.file_ingestion_statusCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$file_ingestion_statusPayload>[]
           }
           delete: {
-            args: Prisma.IngestionStatusDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IngestionStatusPayload>
+            args: Prisma.file_ingestion_statusDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$file_ingestion_statusPayload>
           }
           update: {
-            args: Prisma.IngestionStatusUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IngestionStatusPayload>
+            args: Prisma.file_ingestion_statusUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$file_ingestion_statusPayload>
           }
           deleteMany: {
-            args: Prisma.IngestionStatusDeleteManyArgs<ExtArgs>
+            args: Prisma.file_ingestion_statusDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.IngestionStatusUpdateManyArgs<ExtArgs>
+            args: Prisma.file_ingestion_statusUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.IngestionStatusUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IngestionStatusPayload>[]
+            args: Prisma.file_ingestion_statusUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$file_ingestion_statusPayload>[]
           }
           upsert: {
-            args: Prisma.IngestionStatusUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IngestionStatusPayload>
+            args: Prisma.file_ingestion_statusUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$file_ingestion_statusPayload>
           }
           aggregate: {
-            args: Prisma.IngestionStatusAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateIngestionStatus>
+            args: Prisma.File_ingestion_statusAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateFile_ingestion_status>
           }
           groupBy: {
-            args: Prisma.IngestionStatusGroupByArgs<ExtArgs>
-            result: $Utils.Optional<IngestionStatusGroupByOutputType>[]
+            args: Prisma.file_ingestion_statusGroupByArgs<ExtArgs>
+            result: $Utils.Optional<File_ingestion_statusGroupByOutputType>[]
           }
           count: {
-            args: Prisma.IngestionStatusCountArgs<ExtArgs>
-            result: $Utils.Optional<IngestionStatusCountAggregateOutputType> | number
+            args: Prisma.file_ingestion_statusCountArgs<ExtArgs>
+            result: $Utils.Optional<File_ingestion_statusCountAggregateOutputType> | number
           }
         }
       }
-      TripGroup: {
-        payload: Prisma.$TripGroupPayload<ExtArgs>
-        fields: Prisma.TripGroupFieldRefs
+      trips_group: {
+        payload: Prisma.$trips_groupPayload<ExtArgs>
+        fields: Prisma.trips_groupFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.TripGroupFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$TripGroupPayload> | null
+            args: Prisma.trips_groupFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$trips_groupPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.TripGroupFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$TripGroupPayload>
+            args: Prisma.trips_groupFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$trips_groupPayload>
           }
           findFirst: {
-            args: Prisma.TripGroupFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$TripGroupPayload> | null
+            args: Prisma.trips_groupFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$trips_groupPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.TripGroupFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$TripGroupPayload>
+            args: Prisma.trips_groupFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$trips_groupPayload>
           }
           findMany: {
-            args: Prisma.TripGroupFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$TripGroupPayload>[]
+            args: Prisma.trips_groupFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$trips_groupPayload>[]
           }
           create: {
-            args: Prisma.TripGroupCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$TripGroupPayload>
+            args: Prisma.trips_groupCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$trips_groupPayload>
           }
           createMany: {
-            args: Prisma.TripGroupCreateManyArgs<ExtArgs>
+            args: Prisma.trips_groupCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.TripGroupCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$TripGroupPayload>[]
+            args: Prisma.trips_groupCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$trips_groupPayload>[]
           }
           delete: {
-            args: Prisma.TripGroupDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$TripGroupPayload>
+            args: Prisma.trips_groupDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$trips_groupPayload>
           }
           update: {
-            args: Prisma.TripGroupUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$TripGroupPayload>
+            args: Prisma.trips_groupUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$trips_groupPayload>
           }
           deleteMany: {
-            args: Prisma.TripGroupDeleteManyArgs<ExtArgs>
+            args: Prisma.trips_groupDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.TripGroupUpdateManyArgs<ExtArgs>
+            args: Prisma.trips_groupUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.TripGroupUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$TripGroupPayload>[]
+            args: Prisma.trips_groupUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$trips_groupPayload>[]
           }
           upsert: {
-            args: Prisma.TripGroupUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$TripGroupPayload>
+            args: Prisma.trips_groupUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$trips_groupPayload>
           }
           aggregate: {
-            args: Prisma.TripGroupAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateTripGroup>
+            args: Prisma.Trips_groupAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateTrips_group>
           }
           groupBy: {
-            args: Prisma.TripGroupGroupByArgs<ExtArgs>
-            result: $Utils.Optional<TripGroupGroupByOutputType>[]
+            args: Prisma.trips_groupGroupByArgs<ExtArgs>
+            result: $Utils.Optional<Trips_groupGroupByOutputType>[]
           }
           count: {
-            args: Prisma.TripGroupCountArgs<ExtArgs>
-            result: $Utils.Optional<TripGroupCountAggregateOutputType> | number
+            args: Prisma.trips_groupCountArgs<ExtArgs>
+            result: $Utils.Optional<Trips_groupCountAggregateOutputType> | number
           }
         }
       }
@@ -871,8 +871,8 @@ export namespace Prisma {
     comments?: runtime.SqlCommenterPlugin[]
   }
   export type GlobalOmitConfig = {
-    ingestionStatus?: IngestionStatusOmit
-    tripGroup?: TripGroupOmit
+    file_ingestion_status?: file_ingestion_statusOmit
+    trips_group?: trips_groupOmit
   }
 
   /* Types for Logging */
@@ -954,28 +954,28 @@ export namespace Prisma {
    */
 
   /**
-   * Model IngestionStatus
+   * Model file_ingestion_status
    */
 
-  export type AggregateIngestionStatus = {
-    _count: IngestionStatusCountAggregateOutputType | null
-    _avg: IngestionStatusAvgAggregateOutputType | null
-    _sum: IngestionStatusSumAggregateOutputType | null
-    _min: IngestionStatusMinAggregateOutputType | null
-    _max: IngestionStatusMaxAggregateOutputType | null
+  export type AggregateFile_ingestion_status = {
+    _count: File_ingestion_statusCountAggregateOutputType | null
+    _avg: File_ingestion_statusAvgAggregateOutputType | null
+    _sum: File_ingestion_statusSumAggregateOutputType | null
+    _min: File_ingestion_statusMinAggregateOutputType | null
+    _max: File_ingestion_statusMaxAggregateOutputType | null
   }
 
-  export type IngestionStatusAvgAggregateOutputType = {
+  export type File_ingestion_statusAvgAggregateOutputType = {
     totalRows: number | null
     processedRows: number | null
   }
 
-  export type IngestionStatusSumAggregateOutputType = {
+  export type File_ingestion_statusSumAggregateOutputType = {
     totalRows: number | null
     processedRows: number | null
   }
 
-  export type IngestionStatusMinAggregateOutputType = {
+  export type File_ingestion_statusMinAggregateOutputType = {
     id: string | null
     filename: string | null
     status: string | null
@@ -988,7 +988,7 @@ export namespace Prisma {
     updatedAt: Date | null
   }
 
-  export type IngestionStatusMaxAggregateOutputType = {
+  export type File_ingestion_statusMaxAggregateOutputType = {
     id: string | null
     filename: string | null
     status: string | null
@@ -1001,7 +1001,7 @@ export namespace Prisma {
     updatedAt: Date | null
   }
 
-  export type IngestionStatusCountAggregateOutputType = {
+  export type File_ingestion_statusCountAggregateOutputType = {
     id: number
     filename: number
     status: number
@@ -1016,17 +1016,17 @@ export namespace Prisma {
   }
 
 
-  export type IngestionStatusAvgAggregateInputType = {
+  export type File_ingestion_statusAvgAggregateInputType = {
     totalRows?: true
     processedRows?: true
   }
 
-  export type IngestionStatusSumAggregateInputType = {
+  export type File_ingestion_statusSumAggregateInputType = {
     totalRows?: true
     processedRows?: true
   }
 
-  export type IngestionStatusMinAggregateInputType = {
+  export type File_ingestion_statusMinAggregateInputType = {
     id?: true
     filename?: true
     status?: true
@@ -1039,7 +1039,7 @@ export namespace Prisma {
     updatedAt?: true
   }
 
-  export type IngestionStatusMaxAggregateInputType = {
+  export type File_ingestion_statusMaxAggregateInputType = {
     id?: true
     filename?: true
     status?: true
@@ -1052,7 +1052,7 @@ export namespace Prisma {
     updatedAt?: true
   }
 
-  export type IngestionStatusCountAggregateInputType = {
+  export type File_ingestion_statusCountAggregateInputType = {
     id?: true
     filename?: true
     status?: true
@@ -1066,93 +1066,93 @@ export namespace Prisma {
     _all?: true
   }
 
-  export type IngestionStatusAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type File_ingestion_statusAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which IngestionStatus to aggregate.
+     * Filter which file_ingestion_status to aggregate.
      */
-    where?: IngestionStatusWhereInput
+    where?: file_ingestion_statusWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of IngestionStatuses to fetch.
+     * Determine the order of file_ingestion_statuses to fetch.
      */
-    orderBy?: IngestionStatusOrderByWithRelationInput | IngestionStatusOrderByWithRelationInput[]
+    orderBy?: file_ingestion_statusOrderByWithRelationInput | file_ingestion_statusOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: IngestionStatusWhereUniqueInput
+    cursor?: file_ingestion_statusWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` IngestionStatuses from the position of the cursor.
+     * Take `±n` file_ingestion_statuses from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` IngestionStatuses.
+     * Skip the first `n` file_ingestion_statuses.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned IngestionStatuses
+     * Count returned file_ingestion_statuses
     **/
-    _count?: true | IngestionStatusCountAggregateInputType
+    _count?: true | File_ingestion_statusCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: IngestionStatusAvgAggregateInputType
+    _avg?: File_ingestion_statusAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: IngestionStatusSumAggregateInputType
+    _sum?: File_ingestion_statusSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: IngestionStatusMinAggregateInputType
+    _min?: File_ingestion_statusMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: IngestionStatusMaxAggregateInputType
+    _max?: File_ingestion_statusMaxAggregateInputType
   }
 
-  export type GetIngestionStatusAggregateType<T extends IngestionStatusAggregateArgs> = {
-        [P in keyof T & keyof AggregateIngestionStatus]: P extends '_count' | 'count'
+  export type GetFile_ingestion_statusAggregateType<T extends File_ingestion_statusAggregateArgs> = {
+        [P in keyof T & keyof AggregateFile_ingestion_status]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateIngestionStatus[P]>
-      : GetScalarType<T[P], AggregateIngestionStatus[P]>
+        : GetScalarType<T[P], AggregateFile_ingestion_status[P]>
+      : GetScalarType<T[P], AggregateFile_ingestion_status[P]>
   }
 
 
 
 
-  export type IngestionStatusGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: IngestionStatusWhereInput
-    orderBy?: IngestionStatusOrderByWithAggregationInput | IngestionStatusOrderByWithAggregationInput[]
-    by: IngestionStatusScalarFieldEnum[] | IngestionStatusScalarFieldEnum
-    having?: IngestionStatusScalarWhereWithAggregatesInput
+  export type file_ingestion_statusGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: file_ingestion_statusWhereInput
+    orderBy?: file_ingestion_statusOrderByWithAggregationInput | file_ingestion_statusOrderByWithAggregationInput[]
+    by: File_ingestion_statusScalarFieldEnum[] | File_ingestion_statusScalarFieldEnum
+    having?: file_ingestion_statusScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: IngestionStatusCountAggregateInputType | true
-    _avg?: IngestionStatusAvgAggregateInputType
-    _sum?: IngestionStatusSumAggregateInputType
-    _min?: IngestionStatusMinAggregateInputType
-    _max?: IngestionStatusMaxAggregateInputType
+    _count?: File_ingestion_statusCountAggregateInputType | true
+    _avg?: File_ingestion_statusAvgAggregateInputType
+    _sum?: File_ingestion_statusSumAggregateInputType
+    _min?: File_ingestion_statusMinAggregateInputType
+    _max?: File_ingestion_statusMaxAggregateInputType
   }
 
-  export type IngestionStatusGroupByOutputType = {
+  export type File_ingestion_statusGroupByOutputType = {
     id: string
     filename: string
     status: string
@@ -1163,28 +1163,28 @@ export namespace Prisma {
     completedAt: Date | null
     createdAt: Date
     updatedAt: Date
-    _count: IngestionStatusCountAggregateOutputType | null
-    _avg: IngestionStatusAvgAggregateOutputType | null
-    _sum: IngestionStatusSumAggregateOutputType | null
-    _min: IngestionStatusMinAggregateOutputType | null
-    _max: IngestionStatusMaxAggregateOutputType | null
+    _count: File_ingestion_statusCountAggregateOutputType | null
+    _avg: File_ingestion_statusAvgAggregateOutputType | null
+    _sum: File_ingestion_statusSumAggregateOutputType | null
+    _min: File_ingestion_statusMinAggregateOutputType | null
+    _max: File_ingestion_statusMaxAggregateOutputType | null
   }
 
-  type GetIngestionStatusGroupByPayload<T extends IngestionStatusGroupByArgs> = Prisma.PrismaPromise<
+  type GetFile_ingestion_statusGroupByPayload<T extends file_ingestion_statusGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<IngestionStatusGroupByOutputType, T['by']> &
+      PickEnumerable<File_ingestion_statusGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof IngestionStatusGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof File_ingestion_statusGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], IngestionStatusGroupByOutputType[P]>
-            : GetScalarType<T[P], IngestionStatusGroupByOutputType[P]>
+              : GetScalarType<T[P], File_ingestion_statusGroupByOutputType[P]>
+            : GetScalarType<T[P], File_ingestion_statusGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type IngestionStatusSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type file_ingestion_statusSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     filename?: boolean
     status?: boolean
@@ -1195,9 +1195,9 @@ export namespace Prisma {
     completedAt?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-  }, ExtArgs["result"]["ingestionStatus"]>
+  }, ExtArgs["result"]["file_ingestion_status"]>
 
-  export type IngestionStatusSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type file_ingestion_statusSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     filename?: boolean
     status?: boolean
@@ -1208,9 +1208,9 @@ export namespace Prisma {
     completedAt?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-  }, ExtArgs["result"]["ingestionStatus"]>
+  }, ExtArgs["result"]["file_ingestion_status"]>
 
-  export type IngestionStatusSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type file_ingestion_statusSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     filename?: boolean
     status?: boolean
@@ -1221,9 +1221,9 @@ export namespace Prisma {
     completedAt?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-  }, ExtArgs["result"]["ingestionStatus"]>
+  }, ExtArgs["result"]["file_ingestion_status"]>
 
-  export type IngestionStatusSelectScalar = {
+  export type file_ingestion_statusSelectScalar = {
     id?: boolean
     filename?: boolean
     status?: boolean
@@ -1236,10 +1236,10 @@ export namespace Prisma {
     updatedAt?: boolean
   }
 
-  export type IngestionStatusOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "filename" | "status" | "totalRows" | "processedRows" | "errorMessage" | "startedAt" | "completedAt" | "createdAt" | "updatedAt", ExtArgs["result"]["ingestionStatus"]>
+  export type file_ingestion_statusOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "filename" | "status" | "totalRows" | "processedRows" | "errorMessage" | "startedAt" | "completedAt" | "createdAt" | "updatedAt", ExtArgs["result"]["file_ingestion_status"]>
 
-  export type $IngestionStatusPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "IngestionStatus"
+  export type $file_ingestion_statusPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "file_ingestion_status"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -1252,136 +1252,136 @@ export namespace Prisma {
       completedAt: Date | null
       createdAt: Date
       updatedAt: Date
-    }, ExtArgs["result"]["ingestionStatus"]>
+    }, ExtArgs["result"]["file_ingestion_status"]>
     composites: {}
   }
 
-  type IngestionStatusGetPayload<S extends boolean | null | undefined | IngestionStatusDefaultArgs> = $Result.GetResult<Prisma.$IngestionStatusPayload, S>
+  type file_ingestion_statusGetPayload<S extends boolean | null | undefined | file_ingestion_statusDefaultArgs> = $Result.GetResult<Prisma.$file_ingestion_statusPayload, S>
 
-  type IngestionStatusCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<IngestionStatusFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: IngestionStatusCountAggregateInputType | true
+  type file_ingestion_statusCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<file_ingestion_statusFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: File_ingestion_statusCountAggregateInputType | true
     }
 
-  export interface IngestionStatusDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['IngestionStatus'], meta: { name: 'IngestionStatus' } }
+  export interface file_ingestion_statusDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['file_ingestion_status'], meta: { name: 'file_ingestion_status' } }
     /**
-     * Find zero or one IngestionStatus that matches the filter.
-     * @param {IngestionStatusFindUniqueArgs} args - Arguments to find a IngestionStatus
+     * Find zero or one File_ingestion_status that matches the filter.
+     * @param {file_ingestion_statusFindUniqueArgs} args - Arguments to find a File_ingestion_status
      * @example
-     * // Get one IngestionStatus
-     * const ingestionStatus = await prisma.ingestionStatus.findUnique({
+     * // Get one File_ingestion_status
+     * const file_ingestion_status = await prisma.file_ingestion_status.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends IngestionStatusFindUniqueArgs>(args: SelectSubset<T, IngestionStatusFindUniqueArgs<ExtArgs>>): Prisma__IngestionStatusClient<$Result.GetResult<Prisma.$IngestionStatusPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends file_ingestion_statusFindUniqueArgs>(args: SelectSubset<T, file_ingestion_statusFindUniqueArgs<ExtArgs>>): Prisma__file_ingestion_statusClient<$Result.GetResult<Prisma.$file_ingestion_statusPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one IngestionStatus that matches the filter or throw an error with `error.code='P2025'`
+     * Find one File_ingestion_status that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {IngestionStatusFindUniqueOrThrowArgs} args - Arguments to find a IngestionStatus
+     * @param {file_ingestion_statusFindUniqueOrThrowArgs} args - Arguments to find a File_ingestion_status
      * @example
-     * // Get one IngestionStatus
-     * const ingestionStatus = await prisma.ingestionStatus.findUniqueOrThrow({
+     * // Get one File_ingestion_status
+     * const file_ingestion_status = await prisma.file_ingestion_status.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends IngestionStatusFindUniqueOrThrowArgs>(args: SelectSubset<T, IngestionStatusFindUniqueOrThrowArgs<ExtArgs>>): Prisma__IngestionStatusClient<$Result.GetResult<Prisma.$IngestionStatusPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends file_ingestion_statusFindUniqueOrThrowArgs>(args: SelectSubset<T, file_ingestion_statusFindUniqueOrThrowArgs<ExtArgs>>): Prisma__file_ingestion_statusClient<$Result.GetResult<Prisma.$file_ingestion_statusPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first IngestionStatus that matches the filter.
+     * Find the first File_ingestion_status that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {IngestionStatusFindFirstArgs} args - Arguments to find a IngestionStatus
+     * @param {file_ingestion_statusFindFirstArgs} args - Arguments to find a File_ingestion_status
      * @example
-     * // Get one IngestionStatus
-     * const ingestionStatus = await prisma.ingestionStatus.findFirst({
+     * // Get one File_ingestion_status
+     * const file_ingestion_status = await prisma.file_ingestion_status.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends IngestionStatusFindFirstArgs>(args?: SelectSubset<T, IngestionStatusFindFirstArgs<ExtArgs>>): Prisma__IngestionStatusClient<$Result.GetResult<Prisma.$IngestionStatusPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends file_ingestion_statusFindFirstArgs>(args?: SelectSubset<T, file_ingestion_statusFindFirstArgs<ExtArgs>>): Prisma__file_ingestion_statusClient<$Result.GetResult<Prisma.$file_ingestion_statusPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first IngestionStatus that matches the filter or
+     * Find the first File_ingestion_status that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {IngestionStatusFindFirstOrThrowArgs} args - Arguments to find a IngestionStatus
+     * @param {file_ingestion_statusFindFirstOrThrowArgs} args - Arguments to find a File_ingestion_status
      * @example
-     * // Get one IngestionStatus
-     * const ingestionStatus = await prisma.ingestionStatus.findFirstOrThrow({
+     * // Get one File_ingestion_status
+     * const file_ingestion_status = await prisma.file_ingestion_status.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends IngestionStatusFindFirstOrThrowArgs>(args?: SelectSubset<T, IngestionStatusFindFirstOrThrowArgs<ExtArgs>>): Prisma__IngestionStatusClient<$Result.GetResult<Prisma.$IngestionStatusPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends file_ingestion_statusFindFirstOrThrowArgs>(args?: SelectSubset<T, file_ingestion_statusFindFirstOrThrowArgs<ExtArgs>>): Prisma__file_ingestion_statusClient<$Result.GetResult<Prisma.$file_ingestion_statusPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more IngestionStatuses that matches the filter.
+     * Find zero or more File_ingestion_statuses that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {IngestionStatusFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {file_ingestion_statusFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all IngestionStatuses
-     * const ingestionStatuses = await prisma.ingestionStatus.findMany()
+     * // Get all File_ingestion_statuses
+     * const file_ingestion_statuses = await prisma.file_ingestion_status.findMany()
      * 
-     * // Get first 10 IngestionStatuses
-     * const ingestionStatuses = await prisma.ingestionStatus.findMany({ take: 10 })
+     * // Get first 10 File_ingestion_statuses
+     * const file_ingestion_statuses = await prisma.file_ingestion_status.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const ingestionStatusWithIdOnly = await prisma.ingestionStatus.findMany({ select: { id: true } })
+     * const file_ingestion_statusWithIdOnly = await prisma.file_ingestion_status.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends IngestionStatusFindManyArgs>(args?: SelectSubset<T, IngestionStatusFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$IngestionStatusPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends file_ingestion_statusFindManyArgs>(args?: SelectSubset<T, file_ingestion_statusFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$file_ingestion_statusPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a IngestionStatus.
-     * @param {IngestionStatusCreateArgs} args - Arguments to create a IngestionStatus.
+     * Create a File_ingestion_status.
+     * @param {file_ingestion_statusCreateArgs} args - Arguments to create a File_ingestion_status.
      * @example
-     * // Create one IngestionStatus
-     * const IngestionStatus = await prisma.ingestionStatus.create({
+     * // Create one File_ingestion_status
+     * const File_ingestion_status = await prisma.file_ingestion_status.create({
      *   data: {
-     *     // ... data to create a IngestionStatus
+     *     // ... data to create a File_ingestion_status
      *   }
      * })
      * 
      */
-    create<T extends IngestionStatusCreateArgs>(args: SelectSubset<T, IngestionStatusCreateArgs<ExtArgs>>): Prisma__IngestionStatusClient<$Result.GetResult<Prisma.$IngestionStatusPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends file_ingestion_statusCreateArgs>(args: SelectSubset<T, file_ingestion_statusCreateArgs<ExtArgs>>): Prisma__file_ingestion_statusClient<$Result.GetResult<Prisma.$file_ingestion_statusPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many IngestionStatuses.
-     * @param {IngestionStatusCreateManyArgs} args - Arguments to create many IngestionStatuses.
+     * Create many File_ingestion_statuses.
+     * @param {file_ingestion_statusCreateManyArgs} args - Arguments to create many File_ingestion_statuses.
      * @example
-     * // Create many IngestionStatuses
-     * const ingestionStatus = await prisma.ingestionStatus.createMany({
+     * // Create many File_ingestion_statuses
+     * const file_ingestion_status = await prisma.file_ingestion_status.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends IngestionStatusCreateManyArgs>(args?: SelectSubset<T, IngestionStatusCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends file_ingestion_statusCreateManyArgs>(args?: SelectSubset<T, file_ingestion_statusCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many IngestionStatuses and returns the data saved in the database.
-     * @param {IngestionStatusCreateManyAndReturnArgs} args - Arguments to create many IngestionStatuses.
+     * Create many File_ingestion_statuses and returns the data saved in the database.
+     * @param {file_ingestion_statusCreateManyAndReturnArgs} args - Arguments to create many File_ingestion_statuses.
      * @example
-     * // Create many IngestionStatuses
-     * const ingestionStatus = await prisma.ingestionStatus.createManyAndReturn({
+     * // Create many File_ingestion_statuses
+     * const file_ingestion_status = await prisma.file_ingestion_status.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many IngestionStatuses and only return the `id`
-     * const ingestionStatusWithIdOnly = await prisma.ingestionStatus.createManyAndReturn({
+     * // Create many File_ingestion_statuses and only return the `id`
+     * const file_ingestion_statusWithIdOnly = await prisma.file_ingestion_status.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -1391,28 +1391,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends IngestionStatusCreateManyAndReturnArgs>(args?: SelectSubset<T, IngestionStatusCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$IngestionStatusPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends file_ingestion_statusCreateManyAndReturnArgs>(args?: SelectSubset<T, file_ingestion_statusCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$file_ingestion_statusPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a IngestionStatus.
-     * @param {IngestionStatusDeleteArgs} args - Arguments to delete one IngestionStatus.
+     * Delete a File_ingestion_status.
+     * @param {file_ingestion_statusDeleteArgs} args - Arguments to delete one File_ingestion_status.
      * @example
-     * // Delete one IngestionStatus
-     * const IngestionStatus = await prisma.ingestionStatus.delete({
+     * // Delete one File_ingestion_status
+     * const File_ingestion_status = await prisma.file_ingestion_status.delete({
      *   where: {
-     *     // ... filter to delete one IngestionStatus
+     *     // ... filter to delete one File_ingestion_status
      *   }
      * })
      * 
      */
-    delete<T extends IngestionStatusDeleteArgs>(args: SelectSubset<T, IngestionStatusDeleteArgs<ExtArgs>>): Prisma__IngestionStatusClient<$Result.GetResult<Prisma.$IngestionStatusPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends file_ingestion_statusDeleteArgs>(args: SelectSubset<T, file_ingestion_statusDeleteArgs<ExtArgs>>): Prisma__file_ingestion_statusClient<$Result.GetResult<Prisma.$file_ingestion_statusPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one IngestionStatus.
-     * @param {IngestionStatusUpdateArgs} args - Arguments to update one IngestionStatus.
+     * Update one File_ingestion_status.
+     * @param {file_ingestion_statusUpdateArgs} args - Arguments to update one File_ingestion_status.
      * @example
-     * // Update one IngestionStatus
-     * const ingestionStatus = await prisma.ingestionStatus.update({
+     * // Update one File_ingestion_status
+     * const file_ingestion_status = await prisma.file_ingestion_status.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1422,30 +1422,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends IngestionStatusUpdateArgs>(args: SelectSubset<T, IngestionStatusUpdateArgs<ExtArgs>>): Prisma__IngestionStatusClient<$Result.GetResult<Prisma.$IngestionStatusPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends file_ingestion_statusUpdateArgs>(args: SelectSubset<T, file_ingestion_statusUpdateArgs<ExtArgs>>): Prisma__file_ingestion_statusClient<$Result.GetResult<Prisma.$file_ingestion_statusPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more IngestionStatuses.
-     * @param {IngestionStatusDeleteManyArgs} args - Arguments to filter IngestionStatuses to delete.
+     * Delete zero or more File_ingestion_statuses.
+     * @param {file_ingestion_statusDeleteManyArgs} args - Arguments to filter File_ingestion_statuses to delete.
      * @example
-     * // Delete a few IngestionStatuses
-     * const { count } = await prisma.ingestionStatus.deleteMany({
+     * // Delete a few File_ingestion_statuses
+     * const { count } = await prisma.file_ingestion_status.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends IngestionStatusDeleteManyArgs>(args?: SelectSubset<T, IngestionStatusDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends file_ingestion_statusDeleteManyArgs>(args?: SelectSubset<T, file_ingestion_statusDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more IngestionStatuses.
+     * Update zero or more File_ingestion_statuses.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {IngestionStatusUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {file_ingestion_statusUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many IngestionStatuses
-     * const ingestionStatus = await prisma.ingestionStatus.updateMany({
+     * // Update many File_ingestion_statuses
+     * const file_ingestion_status = await prisma.file_ingestion_status.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1455,14 +1455,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends IngestionStatusUpdateManyArgs>(args: SelectSubset<T, IngestionStatusUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends file_ingestion_statusUpdateManyArgs>(args: SelectSubset<T, file_ingestion_statusUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more IngestionStatuses and returns the data updated in the database.
-     * @param {IngestionStatusUpdateManyAndReturnArgs} args - Arguments to update many IngestionStatuses.
+     * Update zero or more File_ingestion_statuses and returns the data updated in the database.
+     * @param {file_ingestion_statusUpdateManyAndReturnArgs} args - Arguments to update many File_ingestion_statuses.
      * @example
-     * // Update many IngestionStatuses
-     * const ingestionStatus = await prisma.ingestionStatus.updateManyAndReturn({
+     * // Update many File_ingestion_statuses
+     * const file_ingestion_status = await prisma.file_ingestion_status.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1471,8 +1471,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more IngestionStatuses and only return the `id`
-     * const ingestionStatusWithIdOnly = await prisma.ingestionStatus.updateManyAndReturn({
+     * // Update zero or more File_ingestion_statuses and only return the `id`
+     * const file_ingestion_statusWithIdOnly = await prisma.file_ingestion_status.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -1485,56 +1485,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends IngestionStatusUpdateManyAndReturnArgs>(args: SelectSubset<T, IngestionStatusUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$IngestionStatusPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends file_ingestion_statusUpdateManyAndReturnArgs>(args: SelectSubset<T, file_ingestion_statusUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$file_ingestion_statusPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one IngestionStatus.
-     * @param {IngestionStatusUpsertArgs} args - Arguments to update or create a IngestionStatus.
+     * Create or update one File_ingestion_status.
+     * @param {file_ingestion_statusUpsertArgs} args - Arguments to update or create a File_ingestion_status.
      * @example
-     * // Update or create a IngestionStatus
-     * const ingestionStatus = await prisma.ingestionStatus.upsert({
+     * // Update or create a File_ingestion_status
+     * const file_ingestion_status = await prisma.file_ingestion_status.upsert({
      *   create: {
-     *     // ... data to create a IngestionStatus
+     *     // ... data to create a File_ingestion_status
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the IngestionStatus we want to update
+     *     // ... the filter for the File_ingestion_status we want to update
      *   }
      * })
      */
-    upsert<T extends IngestionStatusUpsertArgs>(args: SelectSubset<T, IngestionStatusUpsertArgs<ExtArgs>>): Prisma__IngestionStatusClient<$Result.GetResult<Prisma.$IngestionStatusPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends file_ingestion_statusUpsertArgs>(args: SelectSubset<T, file_ingestion_statusUpsertArgs<ExtArgs>>): Prisma__file_ingestion_statusClient<$Result.GetResult<Prisma.$file_ingestion_statusPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of IngestionStatuses.
+     * Count the number of File_ingestion_statuses.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {IngestionStatusCountArgs} args - Arguments to filter IngestionStatuses to count.
+     * @param {file_ingestion_statusCountArgs} args - Arguments to filter File_ingestion_statuses to count.
      * @example
-     * // Count the number of IngestionStatuses
-     * const count = await prisma.ingestionStatus.count({
+     * // Count the number of File_ingestion_statuses
+     * const count = await prisma.file_ingestion_status.count({
      *   where: {
-     *     // ... the filter for the IngestionStatuses we want to count
+     *     // ... the filter for the File_ingestion_statuses we want to count
      *   }
      * })
     **/
-    count<T extends IngestionStatusCountArgs>(
-      args?: Subset<T, IngestionStatusCountArgs>,
+    count<T extends file_ingestion_statusCountArgs>(
+      args?: Subset<T, file_ingestion_statusCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], IngestionStatusCountAggregateOutputType>
+          : GetScalarType<T['select'], File_ingestion_statusCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a IngestionStatus.
+     * Allows you to perform aggregations operations on a File_ingestion_status.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {IngestionStatusAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {File_ingestion_statusAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -1554,13 +1554,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends IngestionStatusAggregateArgs>(args: Subset<T, IngestionStatusAggregateArgs>): Prisma.PrismaPromise<GetIngestionStatusAggregateType<T>>
+    aggregate<T extends File_ingestion_statusAggregateArgs>(args: Subset<T, File_ingestion_statusAggregateArgs>): Prisma.PrismaPromise<GetFile_ingestion_statusAggregateType<T>>
 
     /**
-     * Group by IngestionStatus.
+     * Group by File_ingestion_status.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {IngestionStatusGroupByArgs} args - Group by arguments.
+     * @param {file_ingestion_statusGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -1575,14 +1575,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends IngestionStatusGroupByArgs,
+      T extends file_ingestion_statusGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: IngestionStatusGroupByArgs['orderBy'] }
-        : { orderBy?: IngestionStatusGroupByArgs['orderBy'] },
+        ? { orderBy: file_ingestion_statusGroupByArgs['orderBy'] }
+        : { orderBy?: file_ingestion_statusGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -1631,20 +1631,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, IngestionStatusGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetIngestionStatusGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, file_ingestion_statusGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetFile_ingestion_statusGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the IngestionStatus model
+   * Fields of the file_ingestion_status model
    */
-  readonly fields: IngestionStatusFieldRefs;
+  readonly fields: file_ingestion_statusFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for IngestionStatus.
+   * The delegate class that acts as a "Promise-like" for file_ingestion_status.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__IngestionStatusClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__file_ingestion_statusClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -1672,398 +1672,398 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the IngestionStatus model
+   * Fields of the file_ingestion_status model
    */
-  interface IngestionStatusFieldRefs {
-    readonly id: FieldRef<"IngestionStatus", 'String'>
-    readonly filename: FieldRef<"IngestionStatus", 'String'>
-    readonly status: FieldRef<"IngestionStatus", 'String'>
-    readonly totalRows: FieldRef<"IngestionStatus", 'Int'>
-    readonly processedRows: FieldRef<"IngestionStatus", 'Int'>
-    readonly errorMessage: FieldRef<"IngestionStatus", 'String'>
-    readonly startedAt: FieldRef<"IngestionStatus", 'DateTime'>
-    readonly completedAt: FieldRef<"IngestionStatus", 'DateTime'>
-    readonly createdAt: FieldRef<"IngestionStatus", 'DateTime'>
-    readonly updatedAt: FieldRef<"IngestionStatus", 'DateTime'>
+  interface file_ingestion_statusFieldRefs {
+    readonly id: FieldRef<"file_ingestion_status", 'String'>
+    readonly filename: FieldRef<"file_ingestion_status", 'String'>
+    readonly status: FieldRef<"file_ingestion_status", 'String'>
+    readonly totalRows: FieldRef<"file_ingestion_status", 'Int'>
+    readonly processedRows: FieldRef<"file_ingestion_status", 'Int'>
+    readonly errorMessage: FieldRef<"file_ingestion_status", 'String'>
+    readonly startedAt: FieldRef<"file_ingestion_status", 'DateTime'>
+    readonly completedAt: FieldRef<"file_ingestion_status", 'DateTime'>
+    readonly createdAt: FieldRef<"file_ingestion_status", 'DateTime'>
+    readonly updatedAt: FieldRef<"file_ingestion_status", 'DateTime'>
   }
     
 
   // Custom InputTypes
   /**
-   * IngestionStatus findUnique
+   * file_ingestion_status findUnique
    */
-  export type IngestionStatusFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type file_ingestion_statusFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the IngestionStatus
+     * Select specific fields to fetch from the file_ingestion_status
      */
-    select?: IngestionStatusSelect<ExtArgs> | null
+    select?: file_ingestion_statusSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the IngestionStatus
+     * Omit specific fields from the file_ingestion_status
      */
-    omit?: IngestionStatusOmit<ExtArgs> | null
+    omit?: file_ingestion_statusOmit<ExtArgs> | null
     /**
-     * Filter, which IngestionStatus to fetch.
+     * Filter, which file_ingestion_status to fetch.
      */
-    where: IngestionStatusWhereUniqueInput
+    where: file_ingestion_statusWhereUniqueInput
   }
 
   /**
-   * IngestionStatus findUniqueOrThrow
+   * file_ingestion_status findUniqueOrThrow
    */
-  export type IngestionStatusFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type file_ingestion_statusFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the IngestionStatus
+     * Select specific fields to fetch from the file_ingestion_status
      */
-    select?: IngestionStatusSelect<ExtArgs> | null
+    select?: file_ingestion_statusSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the IngestionStatus
+     * Omit specific fields from the file_ingestion_status
      */
-    omit?: IngestionStatusOmit<ExtArgs> | null
+    omit?: file_ingestion_statusOmit<ExtArgs> | null
     /**
-     * Filter, which IngestionStatus to fetch.
+     * Filter, which file_ingestion_status to fetch.
      */
-    where: IngestionStatusWhereUniqueInput
+    where: file_ingestion_statusWhereUniqueInput
   }
 
   /**
-   * IngestionStatus findFirst
+   * file_ingestion_status findFirst
    */
-  export type IngestionStatusFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type file_ingestion_statusFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the IngestionStatus
+     * Select specific fields to fetch from the file_ingestion_status
      */
-    select?: IngestionStatusSelect<ExtArgs> | null
+    select?: file_ingestion_statusSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the IngestionStatus
+     * Omit specific fields from the file_ingestion_status
      */
-    omit?: IngestionStatusOmit<ExtArgs> | null
+    omit?: file_ingestion_statusOmit<ExtArgs> | null
     /**
-     * Filter, which IngestionStatus to fetch.
+     * Filter, which file_ingestion_status to fetch.
      */
-    where?: IngestionStatusWhereInput
+    where?: file_ingestion_statusWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of IngestionStatuses to fetch.
+     * Determine the order of file_ingestion_statuses to fetch.
      */
-    orderBy?: IngestionStatusOrderByWithRelationInput | IngestionStatusOrderByWithRelationInput[]
+    orderBy?: file_ingestion_statusOrderByWithRelationInput | file_ingestion_statusOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for IngestionStatuses.
+     * Sets the position for searching for file_ingestion_statuses.
      */
-    cursor?: IngestionStatusWhereUniqueInput
+    cursor?: file_ingestion_statusWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` IngestionStatuses from the position of the cursor.
+     * Take `±n` file_ingestion_statuses from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` IngestionStatuses.
+     * Skip the first `n` file_ingestion_statuses.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of IngestionStatuses.
+     * Filter by unique combinations of file_ingestion_statuses.
      */
-    distinct?: IngestionStatusScalarFieldEnum | IngestionStatusScalarFieldEnum[]
+    distinct?: File_ingestion_statusScalarFieldEnum | File_ingestion_statusScalarFieldEnum[]
   }
 
   /**
-   * IngestionStatus findFirstOrThrow
+   * file_ingestion_status findFirstOrThrow
    */
-  export type IngestionStatusFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type file_ingestion_statusFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the IngestionStatus
+     * Select specific fields to fetch from the file_ingestion_status
      */
-    select?: IngestionStatusSelect<ExtArgs> | null
+    select?: file_ingestion_statusSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the IngestionStatus
+     * Omit specific fields from the file_ingestion_status
      */
-    omit?: IngestionStatusOmit<ExtArgs> | null
+    omit?: file_ingestion_statusOmit<ExtArgs> | null
     /**
-     * Filter, which IngestionStatus to fetch.
+     * Filter, which file_ingestion_status to fetch.
      */
-    where?: IngestionStatusWhereInput
+    where?: file_ingestion_statusWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of IngestionStatuses to fetch.
+     * Determine the order of file_ingestion_statuses to fetch.
      */
-    orderBy?: IngestionStatusOrderByWithRelationInput | IngestionStatusOrderByWithRelationInput[]
+    orderBy?: file_ingestion_statusOrderByWithRelationInput | file_ingestion_statusOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for IngestionStatuses.
+     * Sets the position for searching for file_ingestion_statuses.
      */
-    cursor?: IngestionStatusWhereUniqueInput
+    cursor?: file_ingestion_statusWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` IngestionStatuses from the position of the cursor.
+     * Take `±n` file_ingestion_statuses from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` IngestionStatuses.
+     * Skip the first `n` file_ingestion_statuses.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of IngestionStatuses.
+     * Filter by unique combinations of file_ingestion_statuses.
      */
-    distinct?: IngestionStatusScalarFieldEnum | IngestionStatusScalarFieldEnum[]
+    distinct?: File_ingestion_statusScalarFieldEnum | File_ingestion_statusScalarFieldEnum[]
   }
 
   /**
-   * IngestionStatus findMany
+   * file_ingestion_status findMany
    */
-  export type IngestionStatusFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type file_ingestion_statusFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the IngestionStatus
+     * Select specific fields to fetch from the file_ingestion_status
      */
-    select?: IngestionStatusSelect<ExtArgs> | null
+    select?: file_ingestion_statusSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the IngestionStatus
+     * Omit specific fields from the file_ingestion_status
      */
-    omit?: IngestionStatusOmit<ExtArgs> | null
+    omit?: file_ingestion_statusOmit<ExtArgs> | null
     /**
-     * Filter, which IngestionStatuses to fetch.
+     * Filter, which file_ingestion_statuses to fetch.
      */
-    where?: IngestionStatusWhereInput
+    where?: file_ingestion_statusWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of IngestionStatuses to fetch.
+     * Determine the order of file_ingestion_statuses to fetch.
      */
-    orderBy?: IngestionStatusOrderByWithRelationInput | IngestionStatusOrderByWithRelationInput[]
+    orderBy?: file_ingestion_statusOrderByWithRelationInput | file_ingestion_statusOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing IngestionStatuses.
+     * Sets the position for listing file_ingestion_statuses.
      */
-    cursor?: IngestionStatusWhereUniqueInput
+    cursor?: file_ingestion_statusWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` IngestionStatuses from the position of the cursor.
+     * Take `±n` file_ingestion_statuses from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` IngestionStatuses.
+     * Skip the first `n` file_ingestion_statuses.
      */
     skip?: number
-    distinct?: IngestionStatusScalarFieldEnum | IngestionStatusScalarFieldEnum[]
+    distinct?: File_ingestion_statusScalarFieldEnum | File_ingestion_statusScalarFieldEnum[]
   }
 
   /**
-   * IngestionStatus create
+   * file_ingestion_status create
    */
-  export type IngestionStatusCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type file_ingestion_statusCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the IngestionStatus
+     * Select specific fields to fetch from the file_ingestion_status
      */
-    select?: IngestionStatusSelect<ExtArgs> | null
+    select?: file_ingestion_statusSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the IngestionStatus
+     * Omit specific fields from the file_ingestion_status
      */
-    omit?: IngestionStatusOmit<ExtArgs> | null
+    omit?: file_ingestion_statusOmit<ExtArgs> | null
     /**
-     * The data needed to create a IngestionStatus.
+     * The data needed to create a file_ingestion_status.
      */
-    data: XOR<IngestionStatusCreateInput, IngestionStatusUncheckedCreateInput>
+    data: XOR<file_ingestion_statusCreateInput, file_ingestion_statusUncheckedCreateInput>
   }
 
   /**
-   * IngestionStatus createMany
+   * file_ingestion_status createMany
    */
-  export type IngestionStatusCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type file_ingestion_statusCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many IngestionStatuses.
+     * The data used to create many file_ingestion_statuses.
      */
-    data: IngestionStatusCreateManyInput | IngestionStatusCreateManyInput[]
+    data: file_ingestion_statusCreateManyInput | file_ingestion_statusCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * IngestionStatus createManyAndReturn
+   * file_ingestion_status createManyAndReturn
    */
-  export type IngestionStatusCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type file_ingestion_statusCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the IngestionStatus
+     * Select specific fields to fetch from the file_ingestion_status
      */
-    select?: IngestionStatusSelectCreateManyAndReturn<ExtArgs> | null
+    select?: file_ingestion_statusSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the IngestionStatus
+     * Omit specific fields from the file_ingestion_status
      */
-    omit?: IngestionStatusOmit<ExtArgs> | null
+    omit?: file_ingestion_statusOmit<ExtArgs> | null
     /**
-     * The data used to create many IngestionStatuses.
+     * The data used to create many file_ingestion_statuses.
      */
-    data: IngestionStatusCreateManyInput | IngestionStatusCreateManyInput[]
+    data: file_ingestion_statusCreateManyInput | file_ingestion_statusCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * IngestionStatus update
+   * file_ingestion_status update
    */
-  export type IngestionStatusUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type file_ingestion_statusUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the IngestionStatus
+     * Select specific fields to fetch from the file_ingestion_status
      */
-    select?: IngestionStatusSelect<ExtArgs> | null
+    select?: file_ingestion_statusSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the IngestionStatus
+     * Omit specific fields from the file_ingestion_status
      */
-    omit?: IngestionStatusOmit<ExtArgs> | null
+    omit?: file_ingestion_statusOmit<ExtArgs> | null
     /**
-     * The data needed to update a IngestionStatus.
+     * The data needed to update a file_ingestion_status.
      */
-    data: XOR<IngestionStatusUpdateInput, IngestionStatusUncheckedUpdateInput>
+    data: XOR<file_ingestion_statusUpdateInput, file_ingestion_statusUncheckedUpdateInput>
     /**
-     * Choose, which IngestionStatus to update.
+     * Choose, which file_ingestion_status to update.
      */
-    where: IngestionStatusWhereUniqueInput
+    where: file_ingestion_statusWhereUniqueInput
   }
 
   /**
-   * IngestionStatus updateMany
+   * file_ingestion_status updateMany
    */
-  export type IngestionStatusUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type file_ingestion_statusUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update IngestionStatuses.
+     * The data used to update file_ingestion_statuses.
      */
-    data: XOR<IngestionStatusUpdateManyMutationInput, IngestionStatusUncheckedUpdateManyInput>
+    data: XOR<file_ingestion_statusUpdateManyMutationInput, file_ingestion_statusUncheckedUpdateManyInput>
     /**
-     * Filter which IngestionStatuses to update
+     * Filter which file_ingestion_statuses to update
      */
-    where?: IngestionStatusWhereInput
+    where?: file_ingestion_statusWhereInput
     /**
-     * Limit how many IngestionStatuses to update.
+     * Limit how many file_ingestion_statuses to update.
      */
     limit?: number
   }
 
   /**
-   * IngestionStatus updateManyAndReturn
+   * file_ingestion_status updateManyAndReturn
    */
-  export type IngestionStatusUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type file_ingestion_statusUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the IngestionStatus
+     * Select specific fields to fetch from the file_ingestion_status
      */
-    select?: IngestionStatusSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: file_ingestion_statusSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the IngestionStatus
+     * Omit specific fields from the file_ingestion_status
      */
-    omit?: IngestionStatusOmit<ExtArgs> | null
+    omit?: file_ingestion_statusOmit<ExtArgs> | null
     /**
-     * The data used to update IngestionStatuses.
+     * The data used to update file_ingestion_statuses.
      */
-    data: XOR<IngestionStatusUpdateManyMutationInput, IngestionStatusUncheckedUpdateManyInput>
+    data: XOR<file_ingestion_statusUpdateManyMutationInput, file_ingestion_statusUncheckedUpdateManyInput>
     /**
-     * Filter which IngestionStatuses to update
+     * Filter which file_ingestion_statuses to update
      */
-    where?: IngestionStatusWhereInput
+    where?: file_ingestion_statusWhereInput
     /**
-     * Limit how many IngestionStatuses to update.
+     * Limit how many file_ingestion_statuses to update.
      */
     limit?: number
   }
 
   /**
-   * IngestionStatus upsert
+   * file_ingestion_status upsert
    */
-  export type IngestionStatusUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type file_ingestion_statusUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the IngestionStatus
+     * Select specific fields to fetch from the file_ingestion_status
      */
-    select?: IngestionStatusSelect<ExtArgs> | null
+    select?: file_ingestion_statusSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the IngestionStatus
+     * Omit specific fields from the file_ingestion_status
      */
-    omit?: IngestionStatusOmit<ExtArgs> | null
+    omit?: file_ingestion_statusOmit<ExtArgs> | null
     /**
-     * The filter to search for the IngestionStatus to update in case it exists.
+     * The filter to search for the file_ingestion_status to update in case it exists.
      */
-    where: IngestionStatusWhereUniqueInput
+    where: file_ingestion_statusWhereUniqueInput
     /**
-     * In case the IngestionStatus found by the `where` argument doesn't exist, create a new IngestionStatus with this data.
+     * In case the file_ingestion_status found by the `where` argument doesn't exist, create a new file_ingestion_status with this data.
      */
-    create: XOR<IngestionStatusCreateInput, IngestionStatusUncheckedCreateInput>
+    create: XOR<file_ingestion_statusCreateInput, file_ingestion_statusUncheckedCreateInput>
     /**
-     * In case the IngestionStatus was found with the provided `where` argument, update it with this data.
+     * In case the file_ingestion_status was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<IngestionStatusUpdateInput, IngestionStatusUncheckedUpdateInput>
+    update: XOR<file_ingestion_statusUpdateInput, file_ingestion_statusUncheckedUpdateInput>
   }
 
   /**
-   * IngestionStatus delete
+   * file_ingestion_status delete
    */
-  export type IngestionStatusDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type file_ingestion_statusDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the IngestionStatus
+     * Select specific fields to fetch from the file_ingestion_status
      */
-    select?: IngestionStatusSelect<ExtArgs> | null
+    select?: file_ingestion_statusSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the IngestionStatus
+     * Omit specific fields from the file_ingestion_status
      */
-    omit?: IngestionStatusOmit<ExtArgs> | null
+    omit?: file_ingestion_statusOmit<ExtArgs> | null
     /**
-     * Filter which IngestionStatus to delete.
+     * Filter which file_ingestion_status to delete.
      */
-    where: IngestionStatusWhereUniqueInput
+    where: file_ingestion_statusWhereUniqueInput
   }
 
   /**
-   * IngestionStatus deleteMany
+   * file_ingestion_status deleteMany
    */
-  export type IngestionStatusDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type file_ingestion_statusDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which IngestionStatuses to delete
+     * Filter which file_ingestion_statuses to delete
      */
-    where?: IngestionStatusWhereInput
+    where?: file_ingestion_statusWhereInput
     /**
-     * Limit how many IngestionStatuses to delete.
+     * Limit how many file_ingestion_statuses to delete.
      */
     limit?: number
   }
 
   /**
-   * IngestionStatus without action
+   * file_ingestion_status without action
    */
-  export type IngestionStatusDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type file_ingestion_statusDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the IngestionStatus
+     * Select specific fields to fetch from the file_ingestion_status
      */
-    select?: IngestionStatusSelect<ExtArgs> | null
+    select?: file_ingestion_statusSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the IngestionStatus
+     * Omit specific fields from the file_ingestion_status
      */
-    omit?: IngestionStatusOmit<ExtArgs> | null
+    omit?: file_ingestion_statusOmit<ExtArgs> | null
   }
 
 
   /**
-   * Model TripGroup
+   * Model trips_group
    */
 
-  export type AggregateTripGroup = {
-    _count: TripGroupCountAggregateOutputType | null
-    _avg: TripGroupAvgAggregateOutputType | null
-    _sum: TripGroupSumAggregateOutputType | null
-    _min: TripGroupMinAggregateOutputType | null
-    _max: TripGroupMaxAggregateOutputType | null
+  export type AggregateTrips_group = {
+    _count: Trips_groupCountAggregateOutputType | null
+    _avg: Trips_groupAvgAggregateOutputType | null
+    _sum: Trips_groupSumAggregateOutputType | null
+    _min: Trips_groupMinAggregateOutputType | null
+    _max: Trips_groupMaxAggregateOutputType | null
   }
 
-  export type TripGroupAvgAggregateOutputType = {
+  export type Trips_groupAvgAggregateOutputType = {
     originLat: number | null
     originLon: number | null
     destinationLat: number | null
@@ -2072,7 +2072,7 @@ export namespace Prisma {
     tripCount: number | null
   }
 
-  export type TripGroupSumAggregateOutputType = {
+  export type Trips_groupSumAggregateOutputType = {
     originLat: number | null
     originLon: number | null
     destinationLat: number | null
@@ -2081,7 +2081,7 @@ export namespace Prisma {
     tripCount: number | null
   }
 
-  export type TripGroupMinAggregateOutputType = {
+  export type Trips_groupMinAggregateOutputType = {
     id: string | null
     region: string | null
     originLat: number | null
@@ -2096,7 +2096,7 @@ export namespace Prisma {
     updatedAt: Date | null
   }
 
-  export type TripGroupMaxAggregateOutputType = {
+  export type Trips_groupMaxAggregateOutputType = {
     id: string | null
     region: string | null
     originLat: number | null
@@ -2111,7 +2111,7 @@ export namespace Prisma {
     updatedAt: Date | null
   }
 
-  export type TripGroupCountAggregateOutputType = {
+  export type Trips_groupCountAggregateOutputType = {
     id: number
     region: number
     originLat: number
@@ -2129,7 +2129,7 @@ export namespace Prisma {
   }
 
 
-  export type TripGroupAvgAggregateInputType = {
+  export type Trips_groupAvgAggregateInputType = {
     originLat?: true
     originLon?: true
     destinationLat?: true
@@ -2138,7 +2138,7 @@ export namespace Prisma {
     tripCount?: true
   }
 
-  export type TripGroupSumAggregateInputType = {
+  export type Trips_groupSumAggregateInputType = {
     originLat?: true
     originLon?: true
     destinationLat?: true
@@ -2147,7 +2147,7 @@ export namespace Prisma {
     tripCount?: true
   }
 
-  export type TripGroupMinAggregateInputType = {
+  export type Trips_groupMinAggregateInputType = {
     id?: true
     region?: true
     originLat?: true
@@ -2162,7 +2162,7 @@ export namespace Prisma {
     updatedAt?: true
   }
 
-  export type TripGroupMaxAggregateInputType = {
+  export type Trips_groupMaxAggregateInputType = {
     id?: true
     region?: true
     originLat?: true
@@ -2177,7 +2177,7 @@ export namespace Prisma {
     updatedAt?: true
   }
 
-  export type TripGroupCountAggregateInputType = {
+  export type Trips_groupCountAggregateInputType = {
     id?: true
     region?: true
     originLat?: true
@@ -2194,93 +2194,93 @@ export namespace Prisma {
     _all?: true
   }
 
-  export type TripGroupAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type Trips_groupAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which TripGroup to aggregate.
+     * Filter which trips_group to aggregate.
      */
-    where?: TripGroupWhereInput
+    where?: trips_groupWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of TripGroups to fetch.
+     * Determine the order of trips_groups to fetch.
      */
-    orderBy?: TripGroupOrderByWithRelationInput | TripGroupOrderByWithRelationInput[]
+    orderBy?: trips_groupOrderByWithRelationInput | trips_groupOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: TripGroupWhereUniqueInput
+    cursor?: trips_groupWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` TripGroups from the position of the cursor.
+     * Take `±n` trips_groups from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` TripGroups.
+     * Skip the first `n` trips_groups.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned TripGroups
+     * Count returned trips_groups
     **/
-    _count?: true | TripGroupCountAggregateInputType
+    _count?: true | Trips_groupCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: TripGroupAvgAggregateInputType
+    _avg?: Trips_groupAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: TripGroupSumAggregateInputType
+    _sum?: Trips_groupSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: TripGroupMinAggregateInputType
+    _min?: Trips_groupMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: TripGroupMaxAggregateInputType
+    _max?: Trips_groupMaxAggregateInputType
   }
 
-  export type GetTripGroupAggregateType<T extends TripGroupAggregateArgs> = {
-        [P in keyof T & keyof AggregateTripGroup]: P extends '_count' | 'count'
+  export type GetTrips_groupAggregateType<T extends Trips_groupAggregateArgs> = {
+        [P in keyof T & keyof AggregateTrips_group]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateTripGroup[P]>
-      : GetScalarType<T[P], AggregateTripGroup[P]>
+        : GetScalarType<T[P], AggregateTrips_group[P]>
+      : GetScalarType<T[P], AggregateTrips_group[P]>
   }
 
 
 
 
-  export type TripGroupGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: TripGroupWhereInput
-    orderBy?: TripGroupOrderByWithAggregationInput | TripGroupOrderByWithAggregationInput[]
-    by: TripGroupScalarFieldEnum[] | TripGroupScalarFieldEnum
-    having?: TripGroupScalarWhereWithAggregatesInput
+  export type trips_groupGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: trips_groupWhereInput
+    orderBy?: trips_groupOrderByWithAggregationInput | trips_groupOrderByWithAggregationInput[]
+    by: Trips_groupScalarFieldEnum[] | Trips_groupScalarFieldEnum
+    having?: trips_groupScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: TripGroupCountAggregateInputType | true
-    _avg?: TripGroupAvgAggregateInputType
-    _sum?: TripGroupSumAggregateInputType
-    _min?: TripGroupMinAggregateInputType
-    _max?: TripGroupMaxAggregateInputType
+    _count?: Trips_groupCountAggregateInputType | true
+    _avg?: Trips_groupAvgAggregateInputType
+    _sum?: Trips_groupSumAggregateInputType
+    _min?: Trips_groupMinAggregateInputType
+    _max?: Trips_groupMaxAggregateInputType
   }
 
-  export type TripGroupGroupByOutputType = {
+  export type Trips_groupGroupByOutputType = {
     id: string
     region: string
     originLat: number
@@ -2294,28 +2294,28 @@ export namespace Prisma {
     lastSeenAt: Date
     createdAt: Date
     updatedAt: Date
-    _count: TripGroupCountAggregateOutputType | null
-    _avg: TripGroupAvgAggregateOutputType | null
-    _sum: TripGroupSumAggregateOutputType | null
-    _min: TripGroupMinAggregateOutputType | null
-    _max: TripGroupMaxAggregateOutputType | null
+    _count: Trips_groupCountAggregateOutputType | null
+    _avg: Trips_groupAvgAggregateOutputType | null
+    _sum: Trips_groupSumAggregateOutputType | null
+    _min: Trips_groupMinAggregateOutputType | null
+    _max: Trips_groupMaxAggregateOutputType | null
   }
 
-  type GetTripGroupGroupByPayload<T extends TripGroupGroupByArgs> = Prisma.PrismaPromise<
+  type GetTrips_groupGroupByPayload<T extends trips_groupGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<TripGroupGroupByOutputType, T['by']> &
+      PickEnumerable<Trips_groupGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof TripGroupGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof Trips_groupGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], TripGroupGroupByOutputType[P]>
-            : GetScalarType<T[P], TripGroupGroupByOutputType[P]>
+              : GetScalarType<T[P], Trips_groupGroupByOutputType[P]>
+            : GetScalarType<T[P], Trips_groupGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type TripGroupSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type trips_groupSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     region?: boolean
     originLat?: boolean
@@ -2329,9 +2329,9 @@ export namespace Prisma {
     lastSeenAt?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-  }, ExtArgs["result"]["tripGroup"]>
+  }, ExtArgs["result"]["trips_group"]>
 
-  export type TripGroupSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type trips_groupSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     region?: boolean
     originLat?: boolean
@@ -2345,9 +2345,9 @@ export namespace Prisma {
     lastSeenAt?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-  }, ExtArgs["result"]["tripGroup"]>
+  }, ExtArgs["result"]["trips_group"]>
 
-  export type TripGroupSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type trips_groupSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     region?: boolean
     originLat?: boolean
@@ -2361,9 +2361,9 @@ export namespace Prisma {
     lastSeenAt?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-  }, ExtArgs["result"]["tripGroup"]>
+  }, ExtArgs["result"]["trips_group"]>
 
-  export type TripGroupSelectScalar = {
+  export type trips_groupSelectScalar = {
     id?: boolean
     region?: boolean
     originLat?: boolean
@@ -2379,10 +2379,10 @@ export namespace Prisma {
     updatedAt?: boolean
   }
 
-  export type TripGroupOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "region" | "originLat" | "originLon" | "destinationLat" | "destinationLon" | "hourOfDay" | "tripCount" | "datasources" | "firstSeenAt" | "lastSeenAt" | "createdAt" | "updatedAt", ExtArgs["result"]["tripGroup"]>
+  export type trips_groupOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "region" | "originLat" | "originLon" | "destinationLat" | "destinationLon" | "hourOfDay" | "tripCount" | "datasources" | "firstSeenAt" | "lastSeenAt" | "createdAt" | "updatedAt", ExtArgs["result"]["trips_group"]>
 
-  export type $TripGroupPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "TripGroup"
+  export type $trips_groupPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "trips_group"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -2398,136 +2398,136 @@ export namespace Prisma {
       lastSeenAt: Date
       createdAt: Date
       updatedAt: Date
-    }, ExtArgs["result"]["tripGroup"]>
+    }, ExtArgs["result"]["trips_group"]>
     composites: {}
   }
 
-  type TripGroupGetPayload<S extends boolean | null | undefined | TripGroupDefaultArgs> = $Result.GetResult<Prisma.$TripGroupPayload, S>
+  type trips_groupGetPayload<S extends boolean | null | undefined | trips_groupDefaultArgs> = $Result.GetResult<Prisma.$trips_groupPayload, S>
 
-  type TripGroupCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<TripGroupFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: TripGroupCountAggregateInputType | true
+  type trips_groupCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<trips_groupFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: Trips_groupCountAggregateInputType | true
     }
 
-  export interface TripGroupDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['TripGroup'], meta: { name: 'TripGroup' } }
+  export interface trips_groupDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['trips_group'], meta: { name: 'trips_group' } }
     /**
-     * Find zero or one TripGroup that matches the filter.
-     * @param {TripGroupFindUniqueArgs} args - Arguments to find a TripGroup
+     * Find zero or one Trips_group that matches the filter.
+     * @param {trips_groupFindUniqueArgs} args - Arguments to find a Trips_group
      * @example
-     * // Get one TripGroup
-     * const tripGroup = await prisma.tripGroup.findUnique({
+     * // Get one Trips_group
+     * const trips_group = await prisma.trips_group.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends TripGroupFindUniqueArgs>(args: SelectSubset<T, TripGroupFindUniqueArgs<ExtArgs>>): Prisma__TripGroupClient<$Result.GetResult<Prisma.$TripGroupPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends trips_groupFindUniqueArgs>(args: SelectSubset<T, trips_groupFindUniqueArgs<ExtArgs>>): Prisma__trips_groupClient<$Result.GetResult<Prisma.$trips_groupPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one TripGroup that matches the filter or throw an error with `error.code='P2025'`
+     * Find one Trips_group that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {TripGroupFindUniqueOrThrowArgs} args - Arguments to find a TripGroup
+     * @param {trips_groupFindUniqueOrThrowArgs} args - Arguments to find a Trips_group
      * @example
-     * // Get one TripGroup
-     * const tripGroup = await prisma.tripGroup.findUniqueOrThrow({
+     * // Get one Trips_group
+     * const trips_group = await prisma.trips_group.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends TripGroupFindUniqueOrThrowArgs>(args: SelectSubset<T, TripGroupFindUniqueOrThrowArgs<ExtArgs>>): Prisma__TripGroupClient<$Result.GetResult<Prisma.$TripGroupPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends trips_groupFindUniqueOrThrowArgs>(args: SelectSubset<T, trips_groupFindUniqueOrThrowArgs<ExtArgs>>): Prisma__trips_groupClient<$Result.GetResult<Prisma.$trips_groupPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first TripGroup that matches the filter.
+     * Find the first Trips_group that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {TripGroupFindFirstArgs} args - Arguments to find a TripGroup
+     * @param {trips_groupFindFirstArgs} args - Arguments to find a Trips_group
      * @example
-     * // Get one TripGroup
-     * const tripGroup = await prisma.tripGroup.findFirst({
+     * // Get one Trips_group
+     * const trips_group = await prisma.trips_group.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends TripGroupFindFirstArgs>(args?: SelectSubset<T, TripGroupFindFirstArgs<ExtArgs>>): Prisma__TripGroupClient<$Result.GetResult<Prisma.$TripGroupPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends trips_groupFindFirstArgs>(args?: SelectSubset<T, trips_groupFindFirstArgs<ExtArgs>>): Prisma__trips_groupClient<$Result.GetResult<Prisma.$trips_groupPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first TripGroup that matches the filter or
+     * Find the first Trips_group that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {TripGroupFindFirstOrThrowArgs} args - Arguments to find a TripGroup
+     * @param {trips_groupFindFirstOrThrowArgs} args - Arguments to find a Trips_group
      * @example
-     * // Get one TripGroup
-     * const tripGroup = await prisma.tripGroup.findFirstOrThrow({
+     * // Get one Trips_group
+     * const trips_group = await prisma.trips_group.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends TripGroupFindFirstOrThrowArgs>(args?: SelectSubset<T, TripGroupFindFirstOrThrowArgs<ExtArgs>>): Prisma__TripGroupClient<$Result.GetResult<Prisma.$TripGroupPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends trips_groupFindFirstOrThrowArgs>(args?: SelectSubset<T, trips_groupFindFirstOrThrowArgs<ExtArgs>>): Prisma__trips_groupClient<$Result.GetResult<Prisma.$trips_groupPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more TripGroups that matches the filter.
+     * Find zero or more Trips_groups that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {TripGroupFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {trips_groupFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all TripGroups
-     * const tripGroups = await prisma.tripGroup.findMany()
+     * // Get all Trips_groups
+     * const trips_groups = await prisma.trips_group.findMany()
      * 
-     * // Get first 10 TripGroups
-     * const tripGroups = await prisma.tripGroup.findMany({ take: 10 })
+     * // Get first 10 Trips_groups
+     * const trips_groups = await prisma.trips_group.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const tripGroupWithIdOnly = await prisma.tripGroup.findMany({ select: { id: true } })
+     * const trips_groupWithIdOnly = await prisma.trips_group.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends TripGroupFindManyArgs>(args?: SelectSubset<T, TripGroupFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TripGroupPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends trips_groupFindManyArgs>(args?: SelectSubset<T, trips_groupFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$trips_groupPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a TripGroup.
-     * @param {TripGroupCreateArgs} args - Arguments to create a TripGroup.
+     * Create a Trips_group.
+     * @param {trips_groupCreateArgs} args - Arguments to create a Trips_group.
      * @example
-     * // Create one TripGroup
-     * const TripGroup = await prisma.tripGroup.create({
+     * // Create one Trips_group
+     * const Trips_group = await prisma.trips_group.create({
      *   data: {
-     *     // ... data to create a TripGroup
+     *     // ... data to create a Trips_group
      *   }
      * })
      * 
      */
-    create<T extends TripGroupCreateArgs>(args: SelectSubset<T, TripGroupCreateArgs<ExtArgs>>): Prisma__TripGroupClient<$Result.GetResult<Prisma.$TripGroupPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends trips_groupCreateArgs>(args: SelectSubset<T, trips_groupCreateArgs<ExtArgs>>): Prisma__trips_groupClient<$Result.GetResult<Prisma.$trips_groupPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many TripGroups.
-     * @param {TripGroupCreateManyArgs} args - Arguments to create many TripGroups.
+     * Create many Trips_groups.
+     * @param {trips_groupCreateManyArgs} args - Arguments to create many Trips_groups.
      * @example
-     * // Create many TripGroups
-     * const tripGroup = await prisma.tripGroup.createMany({
+     * // Create many Trips_groups
+     * const trips_group = await prisma.trips_group.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends TripGroupCreateManyArgs>(args?: SelectSubset<T, TripGroupCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends trips_groupCreateManyArgs>(args?: SelectSubset<T, trips_groupCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many TripGroups and returns the data saved in the database.
-     * @param {TripGroupCreateManyAndReturnArgs} args - Arguments to create many TripGroups.
+     * Create many Trips_groups and returns the data saved in the database.
+     * @param {trips_groupCreateManyAndReturnArgs} args - Arguments to create many Trips_groups.
      * @example
-     * // Create many TripGroups
-     * const tripGroup = await prisma.tripGroup.createManyAndReturn({
+     * // Create many Trips_groups
+     * const trips_group = await prisma.trips_group.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many TripGroups and only return the `id`
-     * const tripGroupWithIdOnly = await prisma.tripGroup.createManyAndReturn({
+     * // Create many Trips_groups and only return the `id`
+     * const trips_groupWithIdOnly = await prisma.trips_group.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -2537,28 +2537,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends TripGroupCreateManyAndReturnArgs>(args?: SelectSubset<T, TripGroupCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TripGroupPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends trips_groupCreateManyAndReturnArgs>(args?: SelectSubset<T, trips_groupCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$trips_groupPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a TripGroup.
-     * @param {TripGroupDeleteArgs} args - Arguments to delete one TripGroup.
+     * Delete a Trips_group.
+     * @param {trips_groupDeleteArgs} args - Arguments to delete one Trips_group.
      * @example
-     * // Delete one TripGroup
-     * const TripGroup = await prisma.tripGroup.delete({
+     * // Delete one Trips_group
+     * const Trips_group = await prisma.trips_group.delete({
      *   where: {
-     *     // ... filter to delete one TripGroup
+     *     // ... filter to delete one Trips_group
      *   }
      * })
      * 
      */
-    delete<T extends TripGroupDeleteArgs>(args: SelectSubset<T, TripGroupDeleteArgs<ExtArgs>>): Prisma__TripGroupClient<$Result.GetResult<Prisma.$TripGroupPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends trips_groupDeleteArgs>(args: SelectSubset<T, trips_groupDeleteArgs<ExtArgs>>): Prisma__trips_groupClient<$Result.GetResult<Prisma.$trips_groupPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one TripGroup.
-     * @param {TripGroupUpdateArgs} args - Arguments to update one TripGroup.
+     * Update one Trips_group.
+     * @param {trips_groupUpdateArgs} args - Arguments to update one Trips_group.
      * @example
-     * // Update one TripGroup
-     * const tripGroup = await prisma.tripGroup.update({
+     * // Update one Trips_group
+     * const trips_group = await prisma.trips_group.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2568,30 +2568,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends TripGroupUpdateArgs>(args: SelectSubset<T, TripGroupUpdateArgs<ExtArgs>>): Prisma__TripGroupClient<$Result.GetResult<Prisma.$TripGroupPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends trips_groupUpdateArgs>(args: SelectSubset<T, trips_groupUpdateArgs<ExtArgs>>): Prisma__trips_groupClient<$Result.GetResult<Prisma.$trips_groupPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more TripGroups.
-     * @param {TripGroupDeleteManyArgs} args - Arguments to filter TripGroups to delete.
+     * Delete zero or more Trips_groups.
+     * @param {trips_groupDeleteManyArgs} args - Arguments to filter Trips_groups to delete.
      * @example
-     * // Delete a few TripGroups
-     * const { count } = await prisma.tripGroup.deleteMany({
+     * // Delete a few Trips_groups
+     * const { count } = await prisma.trips_group.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends TripGroupDeleteManyArgs>(args?: SelectSubset<T, TripGroupDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends trips_groupDeleteManyArgs>(args?: SelectSubset<T, trips_groupDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more TripGroups.
+     * Update zero or more Trips_groups.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {TripGroupUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {trips_groupUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many TripGroups
-     * const tripGroup = await prisma.tripGroup.updateMany({
+     * // Update many Trips_groups
+     * const trips_group = await prisma.trips_group.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2601,14 +2601,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends TripGroupUpdateManyArgs>(args: SelectSubset<T, TripGroupUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends trips_groupUpdateManyArgs>(args: SelectSubset<T, trips_groupUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more TripGroups and returns the data updated in the database.
-     * @param {TripGroupUpdateManyAndReturnArgs} args - Arguments to update many TripGroups.
+     * Update zero or more Trips_groups and returns the data updated in the database.
+     * @param {trips_groupUpdateManyAndReturnArgs} args - Arguments to update many Trips_groups.
      * @example
-     * // Update many TripGroups
-     * const tripGroup = await prisma.tripGroup.updateManyAndReturn({
+     * // Update many Trips_groups
+     * const trips_group = await prisma.trips_group.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2617,8 +2617,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more TripGroups and only return the `id`
-     * const tripGroupWithIdOnly = await prisma.tripGroup.updateManyAndReturn({
+     * // Update zero or more Trips_groups and only return the `id`
+     * const trips_groupWithIdOnly = await prisma.trips_group.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -2631,56 +2631,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends TripGroupUpdateManyAndReturnArgs>(args: SelectSubset<T, TripGroupUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TripGroupPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends trips_groupUpdateManyAndReturnArgs>(args: SelectSubset<T, trips_groupUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$trips_groupPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one TripGroup.
-     * @param {TripGroupUpsertArgs} args - Arguments to update or create a TripGroup.
+     * Create or update one Trips_group.
+     * @param {trips_groupUpsertArgs} args - Arguments to update or create a Trips_group.
      * @example
-     * // Update or create a TripGroup
-     * const tripGroup = await prisma.tripGroup.upsert({
+     * // Update or create a Trips_group
+     * const trips_group = await prisma.trips_group.upsert({
      *   create: {
-     *     // ... data to create a TripGroup
+     *     // ... data to create a Trips_group
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the TripGroup we want to update
+     *     // ... the filter for the Trips_group we want to update
      *   }
      * })
      */
-    upsert<T extends TripGroupUpsertArgs>(args: SelectSubset<T, TripGroupUpsertArgs<ExtArgs>>): Prisma__TripGroupClient<$Result.GetResult<Prisma.$TripGroupPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends trips_groupUpsertArgs>(args: SelectSubset<T, trips_groupUpsertArgs<ExtArgs>>): Prisma__trips_groupClient<$Result.GetResult<Prisma.$trips_groupPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of TripGroups.
+     * Count the number of Trips_groups.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {TripGroupCountArgs} args - Arguments to filter TripGroups to count.
+     * @param {trips_groupCountArgs} args - Arguments to filter Trips_groups to count.
      * @example
-     * // Count the number of TripGroups
-     * const count = await prisma.tripGroup.count({
+     * // Count the number of Trips_groups
+     * const count = await prisma.trips_group.count({
      *   where: {
-     *     // ... the filter for the TripGroups we want to count
+     *     // ... the filter for the Trips_groups we want to count
      *   }
      * })
     **/
-    count<T extends TripGroupCountArgs>(
-      args?: Subset<T, TripGroupCountArgs>,
+    count<T extends trips_groupCountArgs>(
+      args?: Subset<T, trips_groupCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], TripGroupCountAggregateOutputType>
+          : GetScalarType<T['select'], Trips_groupCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a TripGroup.
+     * Allows you to perform aggregations operations on a Trips_group.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {TripGroupAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {Trips_groupAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -2700,13 +2700,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends TripGroupAggregateArgs>(args: Subset<T, TripGroupAggregateArgs>): Prisma.PrismaPromise<GetTripGroupAggregateType<T>>
+    aggregate<T extends Trips_groupAggregateArgs>(args: Subset<T, Trips_groupAggregateArgs>): Prisma.PrismaPromise<GetTrips_groupAggregateType<T>>
 
     /**
-     * Group by TripGroup.
+     * Group by Trips_group.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {TripGroupGroupByArgs} args - Group by arguments.
+     * @param {trips_groupGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -2721,14 +2721,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends TripGroupGroupByArgs,
+      T extends trips_groupGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: TripGroupGroupByArgs['orderBy'] }
-        : { orderBy?: TripGroupGroupByArgs['orderBy'] },
+        ? { orderBy: trips_groupGroupByArgs['orderBy'] }
+        : { orderBy?: trips_groupGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -2777,20 +2777,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, TripGroupGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetTripGroupGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, trips_groupGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetTrips_groupGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the TripGroup model
+   * Fields of the trips_group model
    */
-  readonly fields: TripGroupFieldRefs;
+  readonly fields: trips_groupFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for TripGroup.
+   * The delegate class that acts as a "Promise-like" for trips_group.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__TripGroupClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__trips_groupClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -2818,385 +2818,385 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the TripGroup model
+   * Fields of the trips_group model
    */
-  interface TripGroupFieldRefs {
-    readonly id: FieldRef<"TripGroup", 'String'>
-    readonly region: FieldRef<"TripGroup", 'String'>
-    readonly originLat: FieldRef<"TripGroup", 'Float'>
-    readonly originLon: FieldRef<"TripGroup", 'Float'>
-    readonly destinationLat: FieldRef<"TripGroup", 'Float'>
-    readonly destinationLon: FieldRef<"TripGroup", 'Float'>
-    readonly hourOfDay: FieldRef<"TripGroup", 'Int'>
-    readonly tripCount: FieldRef<"TripGroup", 'Int'>
-    readonly datasources: FieldRef<"TripGroup", 'String[]'>
-    readonly firstSeenAt: FieldRef<"TripGroup", 'DateTime'>
-    readonly lastSeenAt: FieldRef<"TripGroup", 'DateTime'>
-    readonly createdAt: FieldRef<"TripGroup", 'DateTime'>
-    readonly updatedAt: FieldRef<"TripGroup", 'DateTime'>
+  interface trips_groupFieldRefs {
+    readonly id: FieldRef<"trips_group", 'String'>
+    readonly region: FieldRef<"trips_group", 'String'>
+    readonly originLat: FieldRef<"trips_group", 'Float'>
+    readonly originLon: FieldRef<"trips_group", 'Float'>
+    readonly destinationLat: FieldRef<"trips_group", 'Float'>
+    readonly destinationLon: FieldRef<"trips_group", 'Float'>
+    readonly hourOfDay: FieldRef<"trips_group", 'Int'>
+    readonly tripCount: FieldRef<"trips_group", 'Int'>
+    readonly datasources: FieldRef<"trips_group", 'String[]'>
+    readonly firstSeenAt: FieldRef<"trips_group", 'DateTime'>
+    readonly lastSeenAt: FieldRef<"trips_group", 'DateTime'>
+    readonly createdAt: FieldRef<"trips_group", 'DateTime'>
+    readonly updatedAt: FieldRef<"trips_group", 'DateTime'>
   }
     
 
   // Custom InputTypes
   /**
-   * TripGroup findUnique
+   * trips_group findUnique
    */
-  export type TripGroupFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type trips_groupFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the TripGroup
+     * Select specific fields to fetch from the trips_group
      */
-    select?: TripGroupSelect<ExtArgs> | null
+    select?: trips_groupSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the TripGroup
+     * Omit specific fields from the trips_group
      */
-    omit?: TripGroupOmit<ExtArgs> | null
+    omit?: trips_groupOmit<ExtArgs> | null
     /**
-     * Filter, which TripGroup to fetch.
+     * Filter, which trips_group to fetch.
      */
-    where: TripGroupWhereUniqueInput
+    where: trips_groupWhereUniqueInput
   }
 
   /**
-   * TripGroup findUniqueOrThrow
+   * trips_group findUniqueOrThrow
    */
-  export type TripGroupFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type trips_groupFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the TripGroup
+     * Select specific fields to fetch from the trips_group
      */
-    select?: TripGroupSelect<ExtArgs> | null
+    select?: trips_groupSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the TripGroup
+     * Omit specific fields from the trips_group
      */
-    omit?: TripGroupOmit<ExtArgs> | null
+    omit?: trips_groupOmit<ExtArgs> | null
     /**
-     * Filter, which TripGroup to fetch.
+     * Filter, which trips_group to fetch.
      */
-    where: TripGroupWhereUniqueInput
+    where: trips_groupWhereUniqueInput
   }
 
   /**
-   * TripGroup findFirst
+   * trips_group findFirst
    */
-  export type TripGroupFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type trips_groupFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the TripGroup
+     * Select specific fields to fetch from the trips_group
      */
-    select?: TripGroupSelect<ExtArgs> | null
+    select?: trips_groupSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the TripGroup
+     * Omit specific fields from the trips_group
      */
-    omit?: TripGroupOmit<ExtArgs> | null
+    omit?: trips_groupOmit<ExtArgs> | null
     /**
-     * Filter, which TripGroup to fetch.
+     * Filter, which trips_group to fetch.
      */
-    where?: TripGroupWhereInput
+    where?: trips_groupWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of TripGroups to fetch.
+     * Determine the order of trips_groups to fetch.
      */
-    orderBy?: TripGroupOrderByWithRelationInput | TripGroupOrderByWithRelationInput[]
+    orderBy?: trips_groupOrderByWithRelationInput | trips_groupOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for TripGroups.
+     * Sets the position for searching for trips_groups.
      */
-    cursor?: TripGroupWhereUniqueInput
+    cursor?: trips_groupWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` TripGroups from the position of the cursor.
+     * Take `±n` trips_groups from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` TripGroups.
+     * Skip the first `n` trips_groups.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of TripGroups.
+     * Filter by unique combinations of trips_groups.
      */
-    distinct?: TripGroupScalarFieldEnum | TripGroupScalarFieldEnum[]
+    distinct?: Trips_groupScalarFieldEnum | Trips_groupScalarFieldEnum[]
   }
 
   /**
-   * TripGroup findFirstOrThrow
+   * trips_group findFirstOrThrow
    */
-  export type TripGroupFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type trips_groupFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the TripGroup
+     * Select specific fields to fetch from the trips_group
      */
-    select?: TripGroupSelect<ExtArgs> | null
+    select?: trips_groupSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the TripGroup
+     * Omit specific fields from the trips_group
      */
-    omit?: TripGroupOmit<ExtArgs> | null
+    omit?: trips_groupOmit<ExtArgs> | null
     /**
-     * Filter, which TripGroup to fetch.
+     * Filter, which trips_group to fetch.
      */
-    where?: TripGroupWhereInput
+    where?: trips_groupWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of TripGroups to fetch.
+     * Determine the order of trips_groups to fetch.
      */
-    orderBy?: TripGroupOrderByWithRelationInput | TripGroupOrderByWithRelationInput[]
+    orderBy?: trips_groupOrderByWithRelationInput | trips_groupOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for TripGroups.
+     * Sets the position for searching for trips_groups.
      */
-    cursor?: TripGroupWhereUniqueInput
+    cursor?: trips_groupWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` TripGroups from the position of the cursor.
+     * Take `±n` trips_groups from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` TripGroups.
+     * Skip the first `n` trips_groups.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of TripGroups.
+     * Filter by unique combinations of trips_groups.
      */
-    distinct?: TripGroupScalarFieldEnum | TripGroupScalarFieldEnum[]
+    distinct?: Trips_groupScalarFieldEnum | Trips_groupScalarFieldEnum[]
   }
 
   /**
-   * TripGroup findMany
+   * trips_group findMany
    */
-  export type TripGroupFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type trips_groupFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the TripGroup
+     * Select specific fields to fetch from the trips_group
      */
-    select?: TripGroupSelect<ExtArgs> | null
+    select?: trips_groupSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the TripGroup
+     * Omit specific fields from the trips_group
      */
-    omit?: TripGroupOmit<ExtArgs> | null
+    omit?: trips_groupOmit<ExtArgs> | null
     /**
-     * Filter, which TripGroups to fetch.
+     * Filter, which trips_groups to fetch.
      */
-    where?: TripGroupWhereInput
+    where?: trips_groupWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of TripGroups to fetch.
+     * Determine the order of trips_groups to fetch.
      */
-    orderBy?: TripGroupOrderByWithRelationInput | TripGroupOrderByWithRelationInput[]
+    orderBy?: trips_groupOrderByWithRelationInput | trips_groupOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing TripGroups.
+     * Sets the position for listing trips_groups.
      */
-    cursor?: TripGroupWhereUniqueInput
+    cursor?: trips_groupWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` TripGroups from the position of the cursor.
+     * Take `±n` trips_groups from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` TripGroups.
+     * Skip the first `n` trips_groups.
      */
     skip?: number
-    distinct?: TripGroupScalarFieldEnum | TripGroupScalarFieldEnum[]
+    distinct?: Trips_groupScalarFieldEnum | Trips_groupScalarFieldEnum[]
   }
 
   /**
-   * TripGroup create
+   * trips_group create
    */
-  export type TripGroupCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type trips_groupCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the TripGroup
+     * Select specific fields to fetch from the trips_group
      */
-    select?: TripGroupSelect<ExtArgs> | null
+    select?: trips_groupSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the TripGroup
+     * Omit specific fields from the trips_group
      */
-    omit?: TripGroupOmit<ExtArgs> | null
+    omit?: trips_groupOmit<ExtArgs> | null
     /**
-     * The data needed to create a TripGroup.
+     * The data needed to create a trips_group.
      */
-    data: XOR<TripGroupCreateInput, TripGroupUncheckedCreateInput>
+    data: XOR<trips_groupCreateInput, trips_groupUncheckedCreateInput>
   }
 
   /**
-   * TripGroup createMany
+   * trips_group createMany
    */
-  export type TripGroupCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type trips_groupCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many TripGroups.
+     * The data used to create many trips_groups.
      */
-    data: TripGroupCreateManyInput | TripGroupCreateManyInput[]
+    data: trips_groupCreateManyInput | trips_groupCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * TripGroup createManyAndReturn
+   * trips_group createManyAndReturn
    */
-  export type TripGroupCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type trips_groupCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the TripGroup
+     * Select specific fields to fetch from the trips_group
      */
-    select?: TripGroupSelectCreateManyAndReturn<ExtArgs> | null
+    select?: trips_groupSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the TripGroup
+     * Omit specific fields from the trips_group
      */
-    omit?: TripGroupOmit<ExtArgs> | null
+    omit?: trips_groupOmit<ExtArgs> | null
     /**
-     * The data used to create many TripGroups.
+     * The data used to create many trips_groups.
      */
-    data: TripGroupCreateManyInput | TripGroupCreateManyInput[]
+    data: trips_groupCreateManyInput | trips_groupCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * TripGroup update
+   * trips_group update
    */
-  export type TripGroupUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type trips_groupUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the TripGroup
+     * Select specific fields to fetch from the trips_group
      */
-    select?: TripGroupSelect<ExtArgs> | null
+    select?: trips_groupSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the TripGroup
+     * Omit specific fields from the trips_group
      */
-    omit?: TripGroupOmit<ExtArgs> | null
+    omit?: trips_groupOmit<ExtArgs> | null
     /**
-     * The data needed to update a TripGroup.
+     * The data needed to update a trips_group.
      */
-    data: XOR<TripGroupUpdateInput, TripGroupUncheckedUpdateInput>
+    data: XOR<trips_groupUpdateInput, trips_groupUncheckedUpdateInput>
     /**
-     * Choose, which TripGroup to update.
+     * Choose, which trips_group to update.
      */
-    where: TripGroupWhereUniqueInput
+    where: trips_groupWhereUniqueInput
   }
 
   /**
-   * TripGroup updateMany
+   * trips_group updateMany
    */
-  export type TripGroupUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type trips_groupUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update TripGroups.
+     * The data used to update trips_groups.
      */
-    data: XOR<TripGroupUpdateManyMutationInput, TripGroupUncheckedUpdateManyInput>
+    data: XOR<trips_groupUpdateManyMutationInput, trips_groupUncheckedUpdateManyInput>
     /**
-     * Filter which TripGroups to update
+     * Filter which trips_groups to update
      */
-    where?: TripGroupWhereInput
+    where?: trips_groupWhereInput
     /**
-     * Limit how many TripGroups to update.
+     * Limit how many trips_groups to update.
      */
     limit?: number
   }
 
   /**
-   * TripGroup updateManyAndReturn
+   * trips_group updateManyAndReturn
    */
-  export type TripGroupUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type trips_groupUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the TripGroup
+     * Select specific fields to fetch from the trips_group
      */
-    select?: TripGroupSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: trips_groupSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the TripGroup
+     * Omit specific fields from the trips_group
      */
-    omit?: TripGroupOmit<ExtArgs> | null
+    omit?: trips_groupOmit<ExtArgs> | null
     /**
-     * The data used to update TripGroups.
+     * The data used to update trips_groups.
      */
-    data: XOR<TripGroupUpdateManyMutationInput, TripGroupUncheckedUpdateManyInput>
+    data: XOR<trips_groupUpdateManyMutationInput, trips_groupUncheckedUpdateManyInput>
     /**
-     * Filter which TripGroups to update
+     * Filter which trips_groups to update
      */
-    where?: TripGroupWhereInput
+    where?: trips_groupWhereInput
     /**
-     * Limit how many TripGroups to update.
+     * Limit how many trips_groups to update.
      */
     limit?: number
   }
 
   /**
-   * TripGroup upsert
+   * trips_group upsert
    */
-  export type TripGroupUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type trips_groupUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the TripGroup
+     * Select specific fields to fetch from the trips_group
      */
-    select?: TripGroupSelect<ExtArgs> | null
+    select?: trips_groupSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the TripGroup
+     * Omit specific fields from the trips_group
      */
-    omit?: TripGroupOmit<ExtArgs> | null
+    omit?: trips_groupOmit<ExtArgs> | null
     /**
-     * The filter to search for the TripGroup to update in case it exists.
+     * The filter to search for the trips_group to update in case it exists.
      */
-    where: TripGroupWhereUniqueInput
+    where: trips_groupWhereUniqueInput
     /**
-     * In case the TripGroup found by the `where` argument doesn't exist, create a new TripGroup with this data.
+     * In case the trips_group found by the `where` argument doesn't exist, create a new trips_group with this data.
      */
-    create: XOR<TripGroupCreateInput, TripGroupUncheckedCreateInput>
+    create: XOR<trips_groupCreateInput, trips_groupUncheckedCreateInput>
     /**
-     * In case the TripGroup was found with the provided `where` argument, update it with this data.
+     * In case the trips_group was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<TripGroupUpdateInput, TripGroupUncheckedUpdateInput>
+    update: XOR<trips_groupUpdateInput, trips_groupUncheckedUpdateInput>
   }
 
   /**
-   * TripGroup delete
+   * trips_group delete
    */
-  export type TripGroupDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type trips_groupDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the TripGroup
+     * Select specific fields to fetch from the trips_group
      */
-    select?: TripGroupSelect<ExtArgs> | null
+    select?: trips_groupSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the TripGroup
+     * Omit specific fields from the trips_group
      */
-    omit?: TripGroupOmit<ExtArgs> | null
+    omit?: trips_groupOmit<ExtArgs> | null
     /**
-     * Filter which TripGroup to delete.
+     * Filter which trips_group to delete.
      */
-    where: TripGroupWhereUniqueInput
+    where: trips_groupWhereUniqueInput
   }
 
   /**
-   * TripGroup deleteMany
+   * trips_group deleteMany
    */
-  export type TripGroupDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type trips_groupDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which TripGroups to delete
+     * Filter which trips_groups to delete
      */
-    where?: TripGroupWhereInput
+    where?: trips_groupWhereInput
     /**
-     * Limit how many TripGroups to delete.
+     * Limit how many trips_groups to delete.
      */
     limit?: number
   }
 
   /**
-   * TripGroup without action
+   * trips_group without action
    */
-  export type TripGroupDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type trips_groupDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the TripGroup
+     * Select specific fields to fetch from the trips_group
      */
-    select?: TripGroupSelect<ExtArgs> | null
+    select?: trips_groupSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the TripGroup
+     * Omit specific fields from the trips_group
      */
-    omit?: TripGroupOmit<ExtArgs> | null
+    omit?: trips_groupOmit<ExtArgs> | null
   }
 
 
@@ -3214,7 +3214,7 @@ export namespace Prisma {
   export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel]
 
 
-  export const IngestionStatusScalarFieldEnum: {
+  export const File_ingestion_statusScalarFieldEnum: {
     id: 'id',
     filename: 'filename',
     status: 'status',
@@ -3227,10 +3227,10 @@ export namespace Prisma {
     updatedAt: 'updatedAt'
   };
 
-  export type IngestionStatusScalarFieldEnum = (typeof IngestionStatusScalarFieldEnum)[keyof typeof IngestionStatusScalarFieldEnum]
+  export type File_ingestion_statusScalarFieldEnum = (typeof File_ingestion_statusScalarFieldEnum)[keyof typeof File_ingestion_statusScalarFieldEnum]
 
 
-  export const TripGroupScalarFieldEnum: {
+  export const Trips_groupScalarFieldEnum: {
     id: 'id',
     region: 'region',
     originLat: 'originLat',
@@ -3246,7 +3246,7 @@ export namespace Prisma {
     updatedAt: 'updatedAt'
   };
 
-  export type TripGroupScalarFieldEnum = (typeof TripGroupScalarFieldEnum)[keyof typeof TripGroupScalarFieldEnum]
+  export type Trips_groupScalarFieldEnum = (typeof Trips_groupScalarFieldEnum)[keyof typeof Trips_groupScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -3337,23 +3337,23 @@ export namespace Prisma {
    */
 
 
-  export type IngestionStatusWhereInput = {
-    AND?: IngestionStatusWhereInput | IngestionStatusWhereInput[]
-    OR?: IngestionStatusWhereInput[]
-    NOT?: IngestionStatusWhereInput | IngestionStatusWhereInput[]
-    id?: StringFilter<"IngestionStatus"> | string
-    filename?: StringFilter<"IngestionStatus"> | string
-    status?: StringFilter<"IngestionStatus"> | string
-    totalRows?: IntFilter<"IngestionStatus"> | number
-    processedRows?: IntFilter<"IngestionStatus"> | number
-    errorMessage?: StringNullableFilter<"IngestionStatus"> | string | null
-    startedAt?: DateTimeFilter<"IngestionStatus"> | Date | string
-    completedAt?: DateTimeNullableFilter<"IngestionStatus"> | Date | string | null
-    createdAt?: DateTimeFilter<"IngestionStatus"> | Date | string
-    updatedAt?: DateTimeFilter<"IngestionStatus"> | Date | string
+  export type file_ingestion_statusWhereInput = {
+    AND?: file_ingestion_statusWhereInput | file_ingestion_statusWhereInput[]
+    OR?: file_ingestion_statusWhereInput[]
+    NOT?: file_ingestion_statusWhereInput | file_ingestion_statusWhereInput[]
+    id?: StringFilter<"file_ingestion_status"> | string
+    filename?: StringFilter<"file_ingestion_status"> | string
+    status?: StringFilter<"file_ingestion_status"> | string
+    totalRows?: IntFilter<"file_ingestion_status"> | number
+    processedRows?: IntFilter<"file_ingestion_status"> | number
+    errorMessage?: StringNullableFilter<"file_ingestion_status"> | string | null
+    startedAt?: DateTimeFilter<"file_ingestion_status"> | Date | string
+    completedAt?: DateTimeNullableFilter<"file_ingestion_status"> | Date | string | null
+    createdAt?: DateTimeFilter<"file_ingestion_status"> | Date | string
+    updatedAt?: DateTimeFilter<"file_ingestion_status"> | Date | string
   }
 
-  export type IngestionStatusOrderByWithRelationInput = {
+  export type file_ingestion_statusOrderByWithRelationInput = {
     id?: SortOrder
     filename?: SortOrder
     status?: SortOrder
@@ -3366,23 +3366,23 @@ export namespace Prisma {
     updatedAt?: SortOrder
   }
 
-  export type IngestionStatusWhereUniqueInput = Prisma.AtLeast<{
+  export type file_ingestion_statusWhereUniqueInput = Prisma.AtLeast<{
     id?: string
     filename?: string
-    AND?: IngestionStatusWhereInput | IngestionStatusWhereInput[]
-    OR?: IngestionStatusWhereInput[]
-    NOT?: IngestionStatusWhereInput | IngestionStatusWhereInput[]
-    status?: StringFilter<"IngestionStatus"> | string
-    totalRows?: IntFilter<"IngestionStatus"> | number
-    processedRows?: IntFilter<"IngestionStatus"> | number
-    errorMessage?: StringNullableFilter<"IngestionStatus"> | string | null
-    startedAt?: DateTimeFilter<"IngestionStatus"> | Date | string
-    completedAt?: DateTimeNullableFilter<"IngestionStatus"> | Date | string | null
-    createdAt?: DateTimeFilter<"IngestionStatus"> | Date | string
-    updatedAt?: DateTimeFilter<"IngestionStatus"> | Date | string
+    AND?: file_ingestion_statusWhereInput | file_ingestion_statusWhereInput[]
+    OR?: file_ingestion_statusWhereInput[]
+    NOT?: file_ingestion_statusWhereInput | file_ingestion_statusWhereInput[]
+    status?: StringFilter<"file_ingestion_status"> | string
+    totalRows?: IntFilter<"file_ingestion_status"> | number
+    processedRows?: IntFilter<"file_ingestion_status"> | number
+    errorMessage?: StringNullableFilter<"file_ingestion_status"> | string | null
+    startedAt?: DateTimeFilter<"file_ingestion_status"> | Date | string
+    completedAt?: DateTimeNullableFilter<"file_ingestion_status"> | Date | string | null
+    createdAt?: DateTimeFilter<"file_ingestion_status"> | Date | string
+    updatedAt?: DateTimeFilter<"file_ingestion_status"> | Date | string
   }, "id" | "filename">
 
-  export type IngestionStatusOrderByWithAggregationInput = {
+  export type file_ingestion_statusOrderByWithAggregationInput = {
     id?: SortOrder
     filename?: SortOrder
     status?: SortOrder
@@ -3393,49 +3393,49 @@ export namespace Prisma {
     completedAt?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
-    _count?: IngestionStatusCountOrderByAggregateInput
-    _avg?: IngestionStatusAvgOrderByAggregateInput
-    _max?: IngestionStatusMaxOrderByAggregateInput
-    _min?: IngestionStatusMinOrderByAggregateInput
-    _sum?: IngestionStatusSumOrderByAggregateInput
+    _count?: file_ingestion_statusCountOrderByAggregateInput
+    _avg?: file_ingestion_statusAvgOrderByAggregateInput
+    _max?: file_ingestion_statusMaxOrderByAggregateInput
+    _min?: file_ingestion_statusMinOrderByAggregateInput
+    _sum?: file_ingestion_statusSumOrderByAggregateInput
   }
 
-  export type IngestionStatusScalarWhereWithAggregatesInput = {
-    AND?: IngestionStatusScalarWhereWithAggregatesInput | IngestionStatusScalarWhereWithAggregatesInput[]
-    OR?: IngestionStatusScalarWhereWithAggregatesInput[]
-    NOT?: IngestionStatusScalarWhereWithAggregatesInput | IngestionStatusScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"IngestionStatus"> | string
-    filename?: StringWithAggregatesFilter<"IngestionStatus"> | string
-    status?: StringWithAggregatesFilter<"IngestionStatus"> | string
-    totalRows?: IntWithAggregatesFilter<"IngestionStatus"> | number
-    processedRows?: IntWithAggregatesFilter<"IngestionStatus"> | number
-    errorMessage?: StringNullableWithAggregatesFilter<"IngestionStatus"> | string | null
-    startedAt?: DateTimeWithAggregatesFilter<"IngestionStatus"> | Date | string
-    completedAt?: DateTimeNullableWithAggregatesFilter<"IngestionStatus"> | Date | string | null
-    createdAt?: DateTimeWithAggregatesFilter<"IngestionStatus"> | Date | string
-    updatedAt?: DateTimeWithAggregatesFilter<"IngestionStatus"> | Date | string
+  export type file_ingestion_statusScalarWhereWithAggregatesInput = {
+    AND?: file_ingestion_statusScalarWhereWithAggregatesInput | file_ingestion_statusScalarWhereWithAggregatesInput[]
+    OR?: file_ingestion_statusScalarWhereWithAggregatesInput[]
+    NOT?: file_ingestion_statusScalarWhereWithAggregatesInput | file_ingestion_statusScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"file_ingestion_status"> | string
+    filename?: StringWithAggregatesFilter<"file_ingestion_status"> | string
+    status?: StringWithAggregatesFilter<"file_ingestion_status"> | string
+    totalRows?: IntWithAggregatesFilter<"file_ingestion_status"> | number
+    processedRows?: IntWithAggregatesFilter<"file_ingestion_status"> | number
+    errorMessage?: StringNullableWithAggregatesFilter<"file_ingestion_status"> | string | null
+    startedAt?: DateTimeWithAggregatesFilter<"file_ingestion_status"> | Date | string
+    completedAt?: DateTimeNullableWithAggregatesFilter<"file_ingestion_status"> | Date | string | null
+    createdAt?: DateTimeWithAggregatesFilter<"file_ingestion_status"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"file_ingestion_status"> | Date | string
   }
 
-  export type TripGroupWhereInput = {
-    AND?: TripGroupWhereInput | TripGroupWhereInput[]
-    OR?: TripGroupWhereInput[]
-    NOT?: TripGroupWhereInput | TripGroupWhereInput[]
-    id?: StringFilter<"TripGroup"> | string
-    region?: StringFilter<"TripGroup"> | string
-    originLat?: FloatFilter<"TripGroup"> | number
-    originLon?: FloatFilter<"TripGroup"> | number
-    destinationLat?: FloatFilter<"TripGroup"> | number
-    destinationLon?: FloatFilter<"TripGroup"> | number
-    hourOfDay?: IntFilter<"TripGroup"> | number
-    tripCount?: IntFilter<"TripGroup"> | number
-    datasources?: StringNullableListFilter<"TripGroup">
-    firstSeenAt?: DateTimeFilter<"TripGroup"> | Date | string
-    lastSeenAt?: DateTimeFilter<"TripGroup"> | Date | string
-    createdAt?: DateTimeFilter<"TripGroup"> | Date | string
-    updatedAt?: DateTimeFilter<"TripGroup"> | Date | string
+  export type trips_groupWhereInput = {
+    AND?: trips_groupWhereInput | trips_groupWhereInput[]
+    OR?: trips_groupWhereInput[]
+    NOT?: trips_groupWhereInput | trips_groupWhereInput[]
+    id?: StringFilter<"trips_group"> | string
+    region?: StringFilter<"trips_group"> | string
+    originLat?: FloatFilter<"trips_group"> | number
+    originLon?: FloatFilter<"trips_group"> | number
+    destinationLat?: FloatFilter<"trips_group"> | number
+    destinationLon?: FloatFilter<"trips_group"> | number
+    hourOfDay?: IntFilter<"trips_group"> | number
+    tripCount?: IntFilter<"trips_group"> | number
+    datasources?: StringNullableListFilter<"trips_group">
+    firstSeenAt?: DateTimeFilter<"trips_group"> | Date | string
+    lastSeenAt?: DateTimeFilter<"trips_group"> | Date | string
+    createdAt?: DateTimeFilter<"trips_group"> | Date | string
+    updatedAt?: DateTimeFilter<"trips_group"> | Date | string
   }
 
-  export type TripGroupOrderByWithRelationInput = {
+  export type trips_groupOrderByWithRelationInput = {
     id?: SortOrder
     region?: SortOrder
     originLat?: SortOrder
@@ -3451,27 +3451,27 @@ export namespace Prisma {
     updatedAt?: SortOrder
   }
 
-  export type TripGroupWhereUniqueInput = Prisma.AtLeast<{
+  export type trips_groupWhereUniqueInput = Prisma.AtLeast<{
     id?: string
-    region_originLat_originLon_destinationLat_destinationLon_hourOfDay?: TripGroupRegionOriginLatOriginLonDestinationLatDestinationLonHourOfDayCompoundUniqueInput
-    AND?: TripGroupWhereInput | TripGroupWhereInput[]
-    OR?: TripGroupWhereInput[]
-    NOT?: TripGroupWhereInput | TripGroupWhereInput[]
-    region?: StringFilter<"TripGroup"> | string
-    originLat?: FloatFilter<"TripGroup"> | number
-    originLon?: FloatFilter<"TripGroup"> | number
-    destinationLat?: FloatFilter<"TripGroup"> | number
-    destinationLon?: FloatFilter<"TripGroup"> | number
-    hourOfDay?: IntFilter<"TripGroup"> | number
-    tripCount?: IntFilter<"TripGroup"> | number
-    datasources?: StringNullableListFilter<"TripGroup">
-    firstSeenAt?: DateTimeFilter<"TripGroup"> | Date | string
-    lastSeenAt?: DateTimeFilter<"TripGroup"> | Date | string
-    createdAt?: DateTimeFilter<"TripGroup"> | Date | string
-    updatedAt?: DateTimeFilter<"TripGroup"> | Date | string
+    region_originLat_originLon_destinationLat_destinationLon_hourOfDay?: trips_groupRegionOriginLatOriginLonDestinationLatDestinationLonHourOfDayCompoundUniqueInput
+    AND?: trips_groupWhereInput | trips_groupWhereInput[]
+    OR?: trips_groupWhereInput[]
+    NOT?: trips_groupWhereInput | trips_groupWhereInput[]
+    region?: StringFilter<"trips_group"> | string
+    originLat?: FloatFilter<"trips_group"> | number
+    originLon?: FloatFilter<"trips_group"> | number
+    destinationLat?: FloatFilter<"trips_group"> | number
+    destinationLon?: FloatFilter<"trips_group"> | number
+    hourOfDay?: IntFilter<"trips_group"> | number
+    tripCount?: IntFilter<"trips_group"> | number
+    datasources?: StringNullableListFilter<"trips_group">
+    firstSeenAt?: DateTimeFilter<"trips_group"> | Date | string
+    lastSeenAt?: DateTimeFilter<"trips_group"> | Date | string
+    createdAt?: DateTimeFilter<"trips_group"> | Date | string
+    updatedAt?: DateTimeFilter<"trips_group"> | Date | string
   }, "id" | "region_originLat_originLon_destinationLat_destinationLon_hourOfDay">
 
-  export type TripGroupOrderByWithAggregationInput = {
+  export type trips_groupOrderByWithAggregationInput = {
     id?: SortOrder
     region?: SortOrder
     originLat?: SortOrder
@@ -3485,33 +3485,33 @@ export namespace Prisma {
     lastSeenAt?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
-    _count?: TripGroupCountOrderByAggregateInput
-    _avg?: TripGroupAvgOrderByAggregateInput
-    _max?: TripGroupMaxOrderByAggregateInput
-    _min?: TripGroupMinOrderByAggregateInput
-    _sum?: TripGroupSumOrderByAggregateInput
+    _count?: trips_groupCountOrderByAggregateInput
+    _avg?: trips_groupAvgOrderByAggregateInput
+    _max?: trips_groupMaxOrderByAggregateInput
+    _min?: trips_groupMinOrderByAggregateInput
+    _sum?: trips_groupSumOrderByAggregateInput
   }
 
-  export type TripGroupScalarWhereWithAggregatesInput = {
-    AND?: TripGroupScalarWhereWithAggregatesInput | TripGroupScalarWhereWithAggregatesInput[]
-    OR?: TripGroupScalarWhereWithAggregatesInput[]
-    NOT?: TripGroupScalarWhereWithAggregatesInput | TripGroupScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"TripGroup"> | string
-    region?: StringWithAggregatesFilter<"TripGroup"> | string
-    originLat?: FloatWithAggregatesFilter<"TripGroup"> | number
-    originLon?: FloatWithAggregatesFilter<"TripGroup"> | number
-    destinationLat?: FloatWithAggregatesFilter<"TripGroup"> | number
-    destinationLon?: FloatWithAggregatesFilter<"TripGroup"> | number
-    hourOfDay?: IntWithAggregatesFilter<"TripGroup"> | number
-    tripCount?: IntWithAggregatesFilter<"TripGroup"> | number
-    datasources?: StringNullableListFilter<"TripGroup">
-    firstSeenAt?: DateTimeWithAggregatesFilter<"TripGroup"> | Date | string
-    lastSeenAt?: DateTimeWithAggregatesFilter<"TripGroup"> | Date | string
-    createdAt?: DateTimeWithAggregatesFilter<"TripGroup"> | Date | string
-    updatedAt?: DateTimeWithAggregatesFilter<"TripGroup"> | Date | string
+  export type trips_groupScalarWhereWithAggregatesInput = {
+    AND?: trips_groupScalarWhereWithAggregatesInput | trips_groupScalarWhereWithAggregatesInput[]
+    OR?: trips_groupScalarWhereWithAggregatesInput[]
+    NOT?: trips_groupScalarWhereWithAggregatesInput | trips_groupScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"trips_group"> | string
+    region?: StringWithAggregatesFilter<"trips_group"> | string
+    originLat?: FloatWithAggregatesFilter<"trips_group"> | number
+    originLon?: FloatWithAggregatesFilter<"trips_group"> | number
+    destinationLat?: FloatWithAggregatesFilter<"trips_group"> | number
+    destinationLon?: FloatWithAggregatesFilter<"trips_group"> | number
+    hourOfDay?: IntWithAggregatesFilter<"trips_group"> | number
+    tripCount?: IntWithAggregatesFilter<"trips_group"> | number
+    datasources?: StringNullableListFilter<"trips_group">
+    firstSeenAt?: DateTimeWithAggregatesFilter<"trips_group"> | Date | string
+    lastSeenAt?: DateTimeWithAggregatesFilter<"trips_group"> | Date | string
+    createdAt?: DateTimeWithAggregatesFilter<"trips_group"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"trips_group"> | Date | string
   }
 
-  export type IngestionStatusCreateInput = {
+  export type file_ingestion_statusCreateInput = {
     id?: string
     filename: string
     status: string
@@ -3524,7 +3524,7 @@ export namespace Prisma {
     updatedAt?: Date | string
   }
 
-  export type IngestionStatusUncheckedCreateInput = {
+  export type file_ingestion_statusUncheckedCreateInput = {
     id?: string
     filename: string
     status: string
@@ -3537,7 +3537,7 @@ export namespace Prisma {
     updatedAt?: Date | string
   }
 
-  export type IngestionStatusUpdateInput = {
+  export type file_ingestion_statusUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     filename?: StringFieldUpdateOperationsInput | string
     status?: StringFieldUpdateOperationsInput | string
@@ -3550,7 +3550,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type IngestionStatusUncheckedUpdateInput = {
+  export type file_ingestion_statusUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     filename?: StringFieldUpdateOperationsInput | string
     status?: StringFieldUpdateOperationsInput | string
@@ -3563,7 +3563,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type IngestionStatusCreateManyInput = {
+  export type file_ingestion_statusCreateManyInput = {
     id?: string
     filename: string
     status: string
@@ -3576,7 +3576,7 @@ export namespace Prisma {
     updatedAt?: Date | string
   }
 
-  export type IngestionStatusUpdateManyMutationInput = {
+  export type file_ingestion_statusUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
     filename?: StringFieldUpdateOperationsInput | string
     status?: StringFieldUpdateOperationsInput | string
@@ -3589,7 +3589,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type IngestionStatusUncheckedUpdateManyInput = {
+  export type file_ingestion_statusUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     filename?: StringFieldUpdateOperationsInput | string
     status?: StringFieldUpdateOperationsInput | string
@@ -3602,7 +3602,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type TripGroupCreateInput = {
+  export type trips_groupCreateInput = {
     id?: string
     region: string
     originLat: number
@@ -3611,14 +3611,14 @@ export namespace Prisma {
     destinationLon: number
     hourOfDay: number
     tripCount?: number
-    datasources?: TripGroupCreatedatasourcesInput | string[]
+    datasources?: trips_groupCreatedatasourcesInput | string[]
     firstSeenAt: Date | string
     lastSeenAt: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
   }
 
-  export type TripGroupUncheckedCreateInput = {
+  export type trips_groupUncheckedCreateInput = {
     id?: string
     region: string
     originLat: number
@@ -3627,14 +3627,14 @@ export namespace Prisma {
     destinationLon: number
     hourOfDay: number
     tripCount?: number
-    datasources?: TripGroupCreatedatasourcesInput | string[]
+    datasources?: trips_groupCreatedatasourcesInput | string[]
     firstSeenAt: Date | string
     lastSeenAt: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
   }
 
-  export type TripGroupUpdateInput = {
+  export type trips_groupUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     region?: StringFieldUpdateOperationsInput | string
     originLat?: FloatFieldUpdateOperationsInput | number
@@ -3643,14 +3643,14 @@ export namespace Prisma {
     destinationLon?: FloatFieldUpdateOperationsInput | number
     hourOfDay?: IntFieldUpdateOperationsInput | number
     tripCount?: IntFieldUpdateOperationsInput | number
-    datasources?: TripGroupUpdatedatasourcesInput | string[]
+    datasources?: trips_groupUpdatedatasourcesInput | string[]
     firstSeenAt?: DateTimeFieldUpdateOperationsInput | Date | string
     lastSeenAt?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type TripGroupUncheckedUpdateInput = {
+  export type trips_groupUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     region?: StringFieldUpdateOperationsInput | string
     originLat?: FloatFieldUpdateOperationsInput | number
@@ -3659,14 +3659,14 @@ export namespace Prisma {
     destinationLon?: FloatFieldUpdateOperationsInput | number
     hourOfDay?: IntFieldUpdateOperationsInput | number
     tripCount?: IntFieldUpdateOperationsInput | number
-    datasources?: TripGroupUpdatedatasourcesInput | string[]
+    datasources?: trips_groupUpdatedatasourcesInput | string[]
     firstSeenAt?: DateTimeFieldUpdateOperationsInput | Date | string
     lastSeenAt?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type TripGroupCreateManyInput = {
+  export type trips_groupCreateManyInput = {
     id?: string
     region: string
     originLat: number
@@ -3675,14 +3675,14 @@ export namespace Prisma {
     destinationLon: number
     hourOfDay: number
     tripCount?: number
-    datasources?: TripGroupCreatedatasourcesInput | string[]
+    datasources?: trips_groupCreatedatasourcesInput | string[]
     firstSeenAt: Date | string
     lastSeenAt: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
   }
 
-  export type TripGroupUpdateManyMutationInput = {
+  export type trips_groupUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
     region?: StringFieldUpdateOperationsInput | string
     originLat?: FloatFieldUpdateOperationsInput | number
@@ -3691,14 +3691,14 @@ export namespace Prisma {
     destinationLon?: FloatFieldUpdateOperationsInput | number
     hourOfDay?: IntFieldUpdateOperationsInput | number
     tripCount?: IntFieldUpdateOperationsInput | number
-    datasources?: TripGroupUpdatedatasourcesInput | string[]
+    datasources?: trips_groupUpdatedatasourcesInput | string[]
     firstSeenAt?: DateTimeFieldUpdateOperationsInput | Date | string
     lastSeenAt?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type TripGroupUncheckedUpdateManyInput = {
+  export type trips_groupUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     region?: StringFieldUpdateOperationsInput | string
     originLat?: FloatFieldUpdateOperationsInput | number
@@ -3707,7 +3707,7 @@ export namespace Prisma {
     destinationLon?: FloatFieldUpdateOperationsInput | number
     hourOfDay?: IntFieldUpdateOperationsInput | number
     tripCount?: IntFieldUpdateOperationsInput | number
-    datasources?: TripGroupUpdatedatasourcesInput | string[]
+    datasources?: trips_groupUpdatedatasourcesInput | string[]
     firstSeenAt?: DateTimeFieldUpdateOperationsInput | Date | string
     lastSeenAt?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -3782,7 +3782,7 @@ export namespace Prisma {
     nulls?: NullsOrder
   }
 
-  export type IngestionStatusCountOrderByAggregateInput = {
+  export type file_ingestion_statusCountOrderByAggregateInput = {
     id?: SortOrder
     filename?: SortOrder
     status?: SortOrder
@@ -3795,12 +3795,12 @@ export namespace Prisma {
     updatedAt?: SortOrder
   }
 
-  export type IngestionStatusAvgOrderByAggregateInput = {
+  export type file_ingestion_statusAvgOrderByAggregateInput = {
     totalRows?: SortOrder
     processedRows?: SortOrder
   }
 
-  export type IngestionStatusMaxOrderByAggregateInput = {
+  export type file_ingestion_statusMaxOrderByAggregateInput = {
     id?: SortOrder
     filename?: SortOrder
     status?: SortOrder
@@ -3813,7 +3813,7 @@ export namespace Prisma {
     updatedAt?: SortOrder
   }
 
-  export type IngestionStatusMinOrderByAggregateInput = {
+  export type file_ingestion_statusMinOrderByAggregateInput = {
     id?: SortOrder
     filename?: SortOrder
     status?: SortOrder
@@ -3826,7 +3826,7 @@ export namespace Prisma {
     updatedAt?: SortOrder
   }
 
-  export type IngestionStatusSumOrderByAggregateInput = {
+  export type file_ingestion_statusSumOrderByAggregateInput = {
     totalRows?: SortOrder
     processedRows?: SortOrder
   }
@@ -3930,7 +3930,7 @@ export namespace Prisma {
     isEmpty?: boolean
   }
 
-  export type TripGroupRegionOriginLatOriginLonDestinationLatDestinationLonHourOfDayCompoundUniqueInput = {
+  export type trips_groupRegionOriginLatOriginLonDestinationLatDestinationLonHourOfDayCompoundUniqueInput = {
     region: string
     originLat: number
     originLon: number
@@ -3939,7 +3939,7 @@ export namespace Prisma {
     hourOfDay: number
   }
 
-  export type TripGroupCountOrderByAggregateInput = {
+  export type trips_groupCountOrderByAggregateInput = {
     id?: SortOrder
     region?: SortOrder
     originLat?: SortOrder
@@ -3955,7 +3955,7 @@ export namespace Prisma {
     updatedAt?: SortOrder
   }
 
-  export type TripGroupAvgOrderByAggregateInput = {
+  export type trips_groupAvgOrderByAggregateInput = {
     originLat?: SortOrder
     originLon?: SortOrder
     destinationLat?: SortOrder
@@ -3964,7 +3964,7 @@ export namespace Prisma {
     tripCount?: SortOrder
   }
 
-  export type TripGroupMaxOrderByAggregateInput = {
+  export type trips_groupMaxOrderByAggregateInput = {
     id?: SortOrder
     region?: SortOrder
     originLat?: SortOrder
@@ -3979,7 +3979,7 @@ export namespace Prisma {
     updatedAt?: SortOrder
   }
 
-  export type TripGroupMinOrderByAggregateInput = {
+  export type trips_groupMinOrderByAggregateInput = {
     id?: SortOrder
     region?: SortOrder
     originLat?: SortOrder
@@ -3994,7 +3994,7 @@ export namespace Prisma {
     updatedAt?: SortOrder
   }
 
-  export type TripGroupSumOrderByAggregateInput = {
+  export type trips_groupSumOrderByAggregateInput = {
     originLat?: SortOrder
     originLon?: SortOrder
     destinationLat?: SortOrder
@@ -4043,7 +4043,7 @@ export namespace Prisma {
     set?: Date | string | null
   }
 
-  export type TripGroupCreatedatasourcesInput = {
+  export type trips_groupCreatedatasourcesInput = {
     set: string[]
   }
 
@@ -4055,7 +4055,7 @@ export namespace Prisma {
     divide?: number
   }
 
-  export type TripGroupUpdatedatasourcesInput = {
+  export type trips_groupUpdatedatasourcesInput = {
     set?: string[]
     push?: string | string[]
   }

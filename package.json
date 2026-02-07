@@ -8,6 +8,7 @@
    "scripts": {
       "dev": "turbo run dev",
       "dev:file-processor": "turbo run dev --filter=file-processor",
+      "dev:file-api": "turbo run dev --filter=file-api",
       "build": "turbo run build",
       "lint": "turbo run lint",
       "test": "turbo run test",
@@ -21,6 +22,7 @@
    },
    "dependencies": {
       "@prisma/client": "^7.3.0",
+      "dotenv": "^17.2.4",
       "prisma": "^7.3.0"
    },
    "devDependencies": {

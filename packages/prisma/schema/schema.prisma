@@ -8,7 +8,7 @@ datasource db {
   schemas  = ["trips"]
 }
 
-model IngestionStatus {
+model file_ingestion_status {
   id            String    @id @default(uuid())
   filename      String    @unique
   status        String // "pending", "processing", "completed", "failed"
@@ -25,7 +25,7 @@ model IngestionStatus {
   @@schema("trips")
 }
 
-model TripGroup {
+model trips_group {
   id             String   @id @default(uuid())
   region         String
   originLat      Float
