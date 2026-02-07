@@ -93,7 +93,7 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
-exports.Prisma.IngestionStatusScalarFieldEnum = {
+exports.Prisma.File_ingestion_statusScalarFieldEnum = {
   id: 'id',
   filename: 'filename',
   status: 'status',
@@ -106,7 +106,7 @@ exports.Prisma.IngestionStatusScalarFieldEnum = {
   updatedAt: 'updatedAt'
 };
 
-exports.Prisma.TripGroupScalarFieldEnum = {
+exports.Prisma.Trips_groupScalarFieldEnum = {
   id: 'id',
   region: 'region',
   originLat: 'originLat',
@@ -139,8 +139,8 @@ exports.Prisma.NullsOrder = {
 
 
 exports.Prisma.ModelName = {
-  IngestionStatus: 'IngestionStatus',
-  TripGroup: 'TripGroup'
+  file_ingestion_status: 'file_ingestion_status',
+  trips_group: 'trips_group'
 };
 /**
  * Create the Client
@@ -150,10 +150,10 @@ const config = {
   "clientVersion": "7.3.0",
   "engineVersion": "9d6ad21cbbceab97458517b147a6a09ff43aa735",
   "activeProvider": "postgresql",
-  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../generated/client\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  schemas  = [\"trips\"]\n}\n\nmodel IngestionStatus {\n  id            String    @id @default(uuid())\n  filename      String    @unique\n  status        String // \"pending\", \"processing\", \"completed\", \"failed\"\n  totalRows     Int       @default(0)\n  processedRows Int       @default(0)\n  errorMessage  String?\n  startedAt     DateTime  @default(now())\n  completedAt   DateTime?\n  createdAt     DateTime  @default(now())\n  updatedAt     DateTime  @updatedAt\n\n  @@index([status])\n  @@index([filename])\n  @@schema(\"trips\")\n}\n\nmodel TripGroup {\n  id             String   @id @default(uuid())\n  region         String\n  originLat      Float\n  originLon      Float\n  destinationLat Float\n  destinationLon Float\n  hourOfDay      Int\n  tripCount      Int      @default(1)\n  datasources    String[]\n  firstSeenAt    DateTime\n  lastSeenAt     DateTime\n  createdAt      DateTime @default(now())\n  updatedAt      DateTime @updatedAt\n\n  @@unique([region, originLat, originLon, destinationLat, destinationLon, hourOfDay])\n  @@index([region, hourOfDay])\n  @@index([originLat, originLon])\n  @@index([destinationLat, destinationLon])\n  @@schema(\"trips\")\n}\n"
+  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../generated/client\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  schemas  = [\"trips\"]\n}\n\nmodel file_ingestion_status {\n  id            String    @id @default(uuid())\n  filename      String    @unique\n  status        String // \"pending\", \"processing\", \"completed\", \"failed\"\n  totalRows     Int       @default(0)\n  processedRows Int       @default(0)\n  errorMessage  String?\n  startedAt     DateTime  @default(now())\n  completedAt   DateTime?\n  createdAt     DateTime  @default(now())\n  updatedAt     DateTime  @updatedAt\n\n  @@index([status])\n  @@index([filename])\n  @@schema(\"trips\")\n}\n\nmodel trips_group {\n  id             String   @id @default(uuid())\n  region         String\n  originLat      Float\n  originLon      Float\n  destinationLat Float\n  destinationLon Float\n  hourOfDay      Int\n  tripCount      Int      @default(1)\n  datasources    String[]\n  firstSeenAt    DateTime\n  lastSeenAt     DateTime\n  createdAt      DateTime @default(now())\n  updatedAt      DateTime @updatedAt\n\n  @@unique([region, originLat, originLon, destinationLat, destinationLon, hourOfDay])\n  @@index([region, hourOfDay])\n  @@index([originLat, originLon])\n  @@index([destinationLat, destinationLon])\n  @@schema(\"trips\")\n}\n"
 }
 
-config.runtimeDataModel = JSON.parse("{\"models\":{\"IngestionStatus\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"filename\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"status\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"totalRows\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"processedRows\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"errorMessage\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"startedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"completedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"TripGroup\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"region\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"originLat\",\"kind\":\"scalar\",\"type\":\"Float\"},{\"name\":\"originLon\",\"kind\":\"scalar\",\"type\":\"Float\"},{\"name\":\"destinationLat\",\"kind\":\"scalar\",\"type\":\"Float\"},{\"name\":\"destinationLon\",\"kind\":\"scalar\",\"type\":\"Float\"},{\"name\":\"hourOfDay\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"tripCount\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"datasources\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"firstSeenAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"lastSeenAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null}},\"enums\":{},\"types\":{}}")
+config.runtimeDataModel = JSON.parse("{\"models\":{\"file_ingestion_status\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"filename\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"status\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"totalRows\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"processedRows\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"errorMessage\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"startedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"completedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"trips_group\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"region\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"originLat\",\"kind\":\"scalar\",\"type\":\"Float\"},{\"name\":\"originLon\",\"kind\":\"scalar\",\"type\":\"Float\"},{\"name\":\"destinationLat\",\"kind\":\"scalar\",\"type\":\"Float\"},{\"name\":\"destinationLon\",\"kind\":\"scalar\",\"type\":\"Float\"},{\"name\":\"hourOfDay\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"tripCount\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"datasources\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"firstSeenAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"lastSeenAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null}},\"enums\":{},\"types\":{}}")
 defineDmmfProperty(exports.Prisma, config.runtimeDataModel)
 config.compilerWasm = {
       getRuntime: async () => require('./query_compiler_fast_bg.js'),

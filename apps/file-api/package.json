@@ -1,5 +1,5 @@
 {
-   "name": "file-processor",
+   "name": "file-api",
    "version": "1.0.0",
    "description": "NestJS API service to process CSV files and ingest trip data",
    "private": true,
