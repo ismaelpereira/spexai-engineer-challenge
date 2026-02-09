@@ -16,8 +16,8 @@
       "db:migrate": "turbo run migrate:dev",
       "db:push": "cd packages/prisma && npm run db:push",
       "docker:build": "docker-compose build",
-      "docker:up": "docker-compose up -d",
-      "docker:down": "docker-compose down",
+      "docker:up": "docker-compose up --build",
+      "docker:down": "docker-compose down -v",
       "docker:logs": "docker-compose logs -f"
    },
    "dependencies": {

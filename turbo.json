@@ -10,7 +10,11 @@
     },
     "db:generate": {
       "cache": false,
-      "outputs": ["packages/database/generated/**"]
+      "outputs": ["packages/database/generated/**"],
+      "inputs":[
+         "schema/**",
+         "prisma.config.ts"
+      ]
     },
      "migrate:dev": {
       "cache": false,
