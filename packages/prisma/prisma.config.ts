@@ -5,8 +5,7 @@ export default defineConfig({
    migrations: {
       path: "./migrations",
    },
-   datasource: { 
-      // url: env("DATABASE_URL") 
-      url: "postgresql://postgres:pass@localhost:5432/trips"
+   datasource: {
+      url: env("DATABASE_URL"),
    },
 });

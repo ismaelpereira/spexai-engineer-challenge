@@ -1,51 +1,20 @@
-FROM node:20-alpine AS builder
-
-WORKDIR /app
-
-# Copy root package files
-COPY package.json package-lock.json* ./
-COPY turbo.json ./
-
-# Copy workspace packages
-COPY packages/prisma ./packages/prisma
-COPY apps/file-processor/package*.json ./apps/file-processor/
-COPY apps/file-processor/nest-cli.json ./apps/file-processor/
-COPY apps/file-processor/tsconfig.json ./apps/file-processor/
-COPY apps/file-processor/src ./apps/file-processor/src
-
-# Install dependencies
-RUN npm install
-
-# Generate Prisma Client
-WORKDIR /app/packages/prisma
-RUN npm run generate
-
-# Build NestJS
-WORKDIR /app/apps/file-processor
-RUN npm run build
-
-# Production stage
 FROM node:20-alpine
 
 WORKDIR /app
 
-# Copy root package files
-COPY package.json package-lock.json* ./
-COPY turbo.json ./
+COPY . .
 
-# Copy workspace packages
-COPY packages/prisma ./packages/prisma
-COPY apps/file-processor/package*.json ./apps/file-processor/
+ARG DATABASE_URL
+ENV DATABASE_URL=${DATABASE_URL}
 
-# Install production dependencies only
-RUN npm install --production
 
-# Generate Prisma Client
-WORKDIR /app/packages/prisma
-RUN npm run generate
+RUN npm install
 
-# Copy built files
-WORKDIR /app/apps/file-processor
-COPY --from=builder /app/apps/file-processor/dist ./dist
+# RUN npx prisma generate \
+#   --schema=packages/prisma/schema/schema.prisma
 
-CMD ["npm", "run", "start:prod"]
+RUN npm run build --workspace=file-api
+
+WORKDIR /app/apps/file-api
+
+CMD ["node", "dist/main.js"]
