@@ -8,7 +8,11 @@
    "scripts": {
       "dev": "turbo run dev",
       "dev:file-processor": "turbo run dev --filter=file-processor",
+      "test:file-processor": "turbo run test --filter=file-processor",
+      "test:e2e:file-api": "turbo run test:e2e --filter=file-api",
       "dev:file-api": "turbo run dev --filter=file-api",
+      "test:e2e:file-processor": "turbo run test:e2e --filter=file-processor",
+      "test:file-api": "turbo run test --filter=file-api",
       "build": "turbo run build",
       "lint": "turbo run lint",
       "test": "turbo run test",
