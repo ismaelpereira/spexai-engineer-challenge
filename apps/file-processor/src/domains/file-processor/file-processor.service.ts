@@ -2,7 +2,7 @@ import { Injectable } from "@nestjs/common";
 import { FileProcessorRepository } from "./file-processor.repository";
 import { ParsedTripRow, TripRow } from "./types/types";
 import { Readable } from "stream";
-import * as csv from "csv-parser"
+import csv from "csv-parser"
 
 @Injectable()
 export class FileProcessorService {
